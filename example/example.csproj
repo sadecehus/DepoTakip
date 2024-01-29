@@ -79,6 +79,11 @@
     <Compile Include="DepoDurum.Designer.cs">
       <DependentUpon>DepoDurum.cs</DependentUpon>
     </Compile>
+    <Compile Include="exampleDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>exampleDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +152,17 @@
     <EmbeddedResource Include="WelcomeForm.resx">
       <DependentUpon>WelcomeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="exampleDataSet.xsc">
+      <DependentUpon>exampleDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="exampleDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>exampleDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="exampleDataSet.xss">
+      <DependentUpon>exampleDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="exampleDataSet" targetNamespace="http://tempuri.org/exampleDataSet.xsd" xmlns:mstns="http://tempuri.org/exampleDataSet.xsd" xmlns="http://tempuri.org/exampleDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="exampleConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="exampleConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.example.Properties.Settings.GlobalReference.Default.exampleConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="v_ÜrünTotalTableAdapter" GeneratorDataComponentClassName="v_ÜrünTotalTableAdapter" Name="v_ÜrünTotal" UserDataComponentName="v_ÜrünTotalTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="exampleConnectionString (Settings)" DbObjectName="example.dbo.v_ÜrünTotal" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ürünId, ürünAdı, [Total Product] FROM dbo.v_ÜrünTotal</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ürünId" DataSetColumn="ürünId" />
+              <Mapping SourceColumn="ürünAdı" DataSetColumn="ürünAdı" />
+              <Mapping SourceColumn="Total Product" DataSetColumn="Total Product" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="exampleDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="exampleDataSet" msprop:Generator_DataSetName="exampleDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="v_ÜrünTotal" msprop:Generator_RowEvHandlerName="v_ÜrünTotalRowChangeEventHandler" msprop:Generator_RowDeletedName="v_ÜrünTotalRowDeleted" msprop:Generator_RowDeletingName="v_ÜrünTotalRowDeleting" msprop:Generator_RowEvArgName="v_ÜrünTotalRowChangeEvent" msprop:Generator_TablePropName="v_ÜrünTotal" msprop:Generator_RowChangedName="v_ÜrünTotalRowChanged" msprop:Generator_RowChangingName="v_ÜrünTotalRowChanging" msprop:Generator_TableClassName="v_ÜrünTotalDataTable" msprop:Generator_RowClassName="v_ÜrünTotalRow" msprop:Generator_TableVarName="tablev_ÜrünTotal" msprop:Generator_UserTableName="v_ÜrünTotal">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ürünId" msprop:Generator_ColumnPropNameInRow="ürünId" msprop:Generator_ColumnPropNameInTable="ürünIdColumn" msprop:Generator_ColumnVarNameInTable="columnürünId" msprop:Generator_UserColumnName="ürünId" type="xs:int" />
+              <xs:element name="ürünAdı" msprop:Generator_ColumnPropNameInRow="ürünAdı" msprop:Generator_ColumnPropNameInTable="ürünAdıColumn" msprop:Generator_ColumnVarNameInTable="columnürünAdı" msprop:Generator_UserColumnName="ürünAdı" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Total_x0020_Product" msprop:Generator_ColumnPropNameInRow="Total_Product" msprop:Generator_ColumnPropNameInTable="Total_ProductColumn" msprop:Generator_ColumnVarNameInTable="columnTotal_Product" msprop:Generator_UserColumnName="Total Product" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:v_ÜrünTotal" />
+      <xs:field xpath="mstns:ürünId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

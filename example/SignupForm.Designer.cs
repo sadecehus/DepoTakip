@@ -44,38 +44,38 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(297, 52);
+            this.label1.Location = new System.Drawing.Point(321, 65);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 37);
+            this.label1.Size = new System.Drawing.Size(153, 37);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Sign UP!";
+            this.label1.Text = "Kayıt Ol!";
             // 
             // labelpassword
             // 
             this.labelpassword.AutoSize = true;
             this.labelpassword.BackColor = System.Drawing.Color.Transparent;
-            this.labelpassword.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelpassword.Location = new System.Drawing.Point(92, 200);
+            this.labelpassword.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelpassword.Location = new System.Drawing.Point(36, 195);
             this.labelpassword.Name = "labelpassword";
-            this.labelpassword.Size = new System.Drawing.Size(173, 37);
+            this.labelpassword.Size = new System.Drawing.Size(104, 34);
             this.labelpassword.TabIndex = 1;
-            this.labelpassword.Text = "Password";
+            this.labelpassword.Text = "Parola";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(92, 126);
+            this.label3.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(36, 131);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(180, 37);
+            this.label3.Size = new System.Drawing.Size(188, 34);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Username";
+            this.label3.Text = "Kullanıcı Adı";
             // 
             // usernameTextBox
             // 
             this.usernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.usernameTextBox.Location = new System.Drawing.Point(283, 126);
+            this.usernameTextBox.Location = new System.Drawing.Point(247, 131);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(336, 38);
             this.usernameTextBox.TabIndex = 3;
@@ -83,7 +83,7 @@
             // passwordTextBox
             // 
             this.passwordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.passwordTextBox.Location = new System.Drawing.Point(283, 199);
+            this.passwordTextBox.Location = new System.Drawing.Point(247, 195);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
             this.passwordTextBox.Size = new System.Drawing.Size(336, 38);
@@ -91,28 +91,28 @@
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(86, 317);
+            this.exitButton.Location = new System.Drawing.Point(247, 337);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(112, 49);
             this.exitButton.TabIndex = 5;
-            this.exitButton.Text = "Exit";
+            this.exitButton.Text = "Vazgeç";
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // signupButton
             // 
-            this.signupButton.Location = new System.Drawing.Point(595, 317);
+            this.signupButton.Location = new System.Drawing.Point(471, 337);
             this.signupButton.Name = "signupButton";
             this.signupButton.Size = new System.Drawing.Size(112, 49);
             this.signupButton.TabIndex = 6;
-            this.signupButton.Text = "SignUP";
+            this.signupButton.Text = "Kayıt OL";
             this.signupButton.UseVisualStyleBackColor = true;
             this.signupButton.Click += new System.EventHandler(this.signupButton_Click);
             // 
             // nameTextbox
             // 
             this.nameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.nameTextbox.Location = new System.Drawing.Point(283, 260);
+            this.nameTextbox.Location = new System.Drawing.Point(247, 265);
             this.nameTextbox.Name = "nameTextbox";
             this.nameTextbox.Size = new System.Drawing.Size(336, 38);
             this.nameTextbox.TabIndex = 8;
@@ -121,12 +121,12 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(92, 261);
+            this.label2.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(36, 265);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(179, 37);
+            this.label2.Size = new System.Drawing.Size(146, 34);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Full Name";
+            this.label2.Text = "Ad Soyad";
             // 
             // SignupForm
             // 
@@ -135,7 +135,7 @@
             this.BackColor = System.Drawing.Color.IndianRed;
             this.BackgroundImage = global::example.Properties.Resources.Adsız_tasarım__8_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(850, 450);
+            this.ClientSize = new System.Drawing.Size(733, 450);
             this.Controls.Add(this.nameTextbox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.signupButton);

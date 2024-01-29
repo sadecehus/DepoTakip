@@ -79,7 +79,8 @@
             // LoginButton
             // 
             this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LoginButton.Location = new System.Drawing.Point(193, 185);
+            this.LoginButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.LoginButton.Location = new System.Drawing.Point(217, 185);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(123, 41);
             this.LoginButton.TabIndex = 4;
@@ -90,7 +91,7 @@
             // exitButton
             // 
             this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.exitButton.Location = new System.Drawing.Point(23, 185);
+            this.exitButton.Location = new System.Drawing.Point(42, 185);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(123, 41);
             this.exitButton.TabIndex = 5;
@@ -101,7 +102,7 @@
             // signupButton
             // 
             this.signupButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.signupButton.Location = new System.Drawing.Point(84, 246);
+            this.signupButton.Location = new System.Drawing.Point(105, 246);
             this.signupButton.Name = "signupButton";
             this.signupButton.Size = new System.Drawing.Size(164, 39);
             this.signupButton.TabIndex = 6;
@@ -116,7 +117,7 @@
             this.BackColor = System.Drawing.Color.IndianRed;
             this.BackgroundImage = global::example.Properties.Resources.Adsız_tasarım__7_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(372, 369);
+            this.ClientSize = new System.Drawing.Size(374, 369);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.signupButton);

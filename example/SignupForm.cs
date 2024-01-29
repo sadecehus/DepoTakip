@@ -23,7 +23,9 @@ namespace example
 
         private void exitButton_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+          this.Close();
+          LoginForm lf = new LoginForm();
+          lf.Show();
         }
 
         private void signupButton_Click(object sender, EventArgs e)

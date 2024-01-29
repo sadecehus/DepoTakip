@@ -164,7 +164,7 @@ namespace example
                         }
                     }
                 }
-                catch (Exception exception)
+                catch (Exception)
                 {
                     MessageBox.Show("Hata: Yetersiz Bakiye");
                 }

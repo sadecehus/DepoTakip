@@ -30,7 +30,9 @@ namespace example
 
         private void DepoDurum_Load(object sender, EventArgs e)
         {
-           
+            // TODO: This line of code loads data into the 'exampleDataSet.v_ÜrünTotal' table. You can move, or remove it, as needed.
+            this.v_ÜrünTotalTableAdapter.Fill(this.exampleDataSet.v_ÜrünTotal);
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -38,6 +40,11 @@ namespace example
             this.Close();
             afterlogin al=new afterlogin();
             al.Show();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
