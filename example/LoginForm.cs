@@ -21,6 +21,23 @@ namespace example
         public LoginForm()
         {
             InitializeComponent();
+            this.KeyPreview = true;
+            this.KeyPress += new KeyPressEventHandler(LoginForm_KeyPress);
+        }
+
+        private void LoginForm_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Eğer basılan tuş Enter ise
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                // LoginButton_Click metodunu çağır
+                LoginButton_Click(this, new EventArgs());
+            }
+
+            if (e.KeyChar == (char)Keys.Escape)
+            {
+                exitButton_Click(this,new EventArgs());
+            }
         }
 
         private void exitButton_Click(object sender, EventArgs e)

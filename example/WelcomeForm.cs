@@ -6,6 +6,7 @@ using System.IO;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 
+
 namespace example
 {
     public partial class WelcomeForm : Form
@@ -114,8 +115,22 @@ namespace example
                 conn.Close();
             }
 
-            database.fillGrid(dataGridView1, "tbl_islem");
             ürünAdıComboBox.SelectedIndexChanged += ürünAdıComboBox_SelectedIndexChanged;
+            database.fillGrid(dataGridView1, "tbl_islem");
+            //try
+            //{
+            //    conn = new SqlConnection(sqlconn);
+            //    adapter = new SqlDataAdapter("select * from tbl_islem where username="+LoginForm.oturum+"", conn);
+            //    ds = new DataSet();
+            //    conn.Open();
+            //    adapter.Fill(ds, "tbl_islem");
+            //    dataGridView1.DataSource = ds.Tables["tbl_islem"];
+            //    conn.Close();
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("An error occurred: " + ex.Message);
+            //}
         }
 
         //İşlemlerden sonra dataGridViewi günceller
@@ -139,7 +154,7 @@ namespace example
             }
         }
 
-        //Updates totalCountLabel after the buy or sell operations
+  
         private void UpdateTotalCountLabel()
         {
             try
@@ -160,7 +175,6 @@ namespace example
             }
         }
 
-        //This function call when we pressed the alisBox Button
         private void alisBox_Click(object sender, EventArgs e)
         {
             if (textBox2.Text == "" || fiyatTextbox.Text == "" || checkercombobox())
@@ -186,7 +200,6 @@ namespace example
                                 -float.Parse(textBox2.Text) * float.Parse(fiyatTextbox.Text));
                             conn.Open();
 
-                            //Total bakiye kontrolü yapılıyor.
                             if (float.Parse(totalCountLabel.Text) > 0 &&
                                 float.Parse(textBox2.Text) * float.Parse(fiyatTextbox.Text) <=
                                 float.Parse(totalCountLabel.Text))
@@ -195,7 +208,7 @@ namespace example
                                 MessageBox.Show("Alış Başarılı");
                                 UpdateDataGridView();
                                 UpdateTotalCountLabel();
-                                //UPDATE EKLENECEK PRODUCTCOUNTLABEL İİÇİNN
+                                
                             }
                             else
                             {
