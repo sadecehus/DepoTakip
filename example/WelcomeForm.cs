@@ -2,6 +2,9 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.IO;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 
 namespace example
 {
@@ -22,8 +25,45 @@ namespace example
             InitializeComponent();
             nameLabel.Text = nameSurname;
             DisplayUsername(nameSurname);
+
         }
 
+        public void ExportDataGridViewToPdf(DataGridView dgv, string filename)
+        {
+            // PDF dokümanını oluştur
+            Document document = new Document();
+            PdfWriter writer = PdfWriter.GetInstance(document, new FileStream(filename, FileMode.Create));
+            document.Open();
+
+            // Tabloyu PDF'e aktar
+            PdfPTable table = new PdfPTable(dgv.Columns.Count);
+            // Başlık ekle
+            foreach (DataGridViewColumn column in dgv.Columns)
+            {
+                PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
+                table.AddCell(cell);
+            }
+            // Satırları ekle
+            foreach (DataGridViewRow row in dgv.Rows)
+            {
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    // Null kontrolü yapılıyor
+                    if (cell.Value != null)
+                    {
+                        table.AddCell(new Phrase(cell.Value.ToString()));
+                    }
+                    else
+                    {
+                        // Hücre değeri null ise boş bir hücre ekleyin
+                        table.AddCell(new Phrase(""));
+                    }
+                }
+            }
+
+            document.Add(table);
+            document.Close();
+        }
         private void DisplayUsername(string nameSurname)
         {
             var sqlQuery = "SELECT username FROM tbl_user_login WHERE name_surname = @nameSurname";
@@ -292,6 +332,29 @@ namespace example
             var af = new afterlogin();
             Close();
             af.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            // SaveFileDialog kullanarak kullanıcının dosyayı nereye kaydedeceğini seçmesini sağlayın
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "PDF Files|*.pdf";
+            saveFileDialog.Title = "PDF olarak kaydet";
+            saveFileDialog.ShowDialog();
+
+            // Eğer kullanıcı dosya adı seçtiyse PDF oluşturma işlemine devam edin
+            if (saveFileDialog.FileName != "")
+            {
+                try
+                {
+                    ExportDataGridViewToPdf(dataGridView1, saveFileDialog.FileName);
+                    MessageBox.Show("PDF başarıyla kaydedildi: " + saveFileDialog.FileName);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("PDF kaydedilemedi: " + ex.Message);
+                }
+            }
         }
     }
 }

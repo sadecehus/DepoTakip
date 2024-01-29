@@ -40,7 +40,7 @@
             // usernameTextbox
             // 
             this.usernameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.usernameTextbox.Location = new System.Drawing.Point(160, 78);
+            this.usernameTextbox.Location = new System.Drawing.Point(160, 83);
             this.usernameTextbox.Name = "usernameTextbox";
             this.usernameTextbox.Size = new System.Drawing.Size(193, 34);
             this.usernameTextbox.TabIndex = 0;
@@ -59,7 +59,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(22, 78);
+            this.label1.Location = new System.Drawing.Point(12, 83);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 29);
             this.label1.TabIndex = 2;
@@ -70,7 +70,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(22, 140);
+            this.label2.Location = new System.Drawing.Point(12, 137);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(128, 29);
             this.label2.TabIndex = 3;
@@ -80,33 +80,33 @@
             // 
             this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.LoginButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.LoginButton.Location = new System.Drawing.Point(217, 185);
+            this.LoginButton.Location = new System.Drawing.Point(233, 185);
             this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(123, 41);
+            this.LoginButton.Size = new System.Drawing.Size(120, 45);
             this.LoginButton.TabIndex = 4;
-            this.LoginButton.Text = "Login";
+            this.LoginButton.Text = "Giriş Yap";
             this.LoginButton.UseVisualStyleBackColor = true;
             this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // exitButton
             // 
             this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.exitButton.Location = new System.Drawing.Point(42, 185);
+            this.exitButton.Location = new System.Drawing.Point(133, 255);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(123, 41);
+            this.exitButton.Size = new System.Drawing.Size(120, 45);
             this.exitButton.TabIndex = 5;
-            this.exitButton.Text = "Exit";
+            this.exitButton.Text = "Çıkış";
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // signupButton
             // 
-            this.signupButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.signupButton.Location = new System.Drawing.Point(105, 246);
+            this.signupButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.signupButton.Location = new System.Drawing.Point(27, 185);
             this.signupButton.Name = "signupButton";
-            this.signupButton.Size = new System.Drawing.Size(164, 39);
+            this.signupButton.Size = new System.Drawing.Size(120, 45);
             this.signupButton.TabIndex = 6;
-            this.signupButton.Text = "SignUp";
+            this.signupButton.Text = "Kaydol";
             this.signupButton.UseVisualStyleBackColor = true;
             this.signupButton.Click += new System.EventHandler(this.signupButton_Click);
             // 

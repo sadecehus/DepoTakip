@@ -40,10 +40,10 @@
             // 
             this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.Location = new System.Drawing.Point(24, 242);
-            this.simpleButton2.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.simpleButton2.Location = new System.Drawing.Point(84, 244);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(19, 19, 19, 19);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(712, 88);
+            this.simpleButton2.Size = new System.Drawing.Size(600, 75);
             this.simpleButton2.TabIndex = 1;
             this.simpleButton2.Text = "Depo Durumu";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
@@ -52,10 +52,10 @@
             // 
             this.simpleButton3.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.simpleButton3.Appearance.Options.UseFont = true;
-            this.simpleButton3.Location = new System.Drawing.Point(24, 338);
-            this.simpleButton3.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.simpleButton3.Location = new System.Drawing.Point(84, 337);
+            this.simpleButton3.Margin = new System.Windows.Forms.Padding(19, 19, 19, 19);
             this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(712, 88);
+            this.simpleButton3.Size = new System.Drawing.Size(600, 75);
             this.simpleButton3.TabIndex = 2;
             this.simpleButton3.Text = "Üyelik İşlemleri\r\n";
             this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
@@ -64,10 +64,10 @@
             // 
             this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Location = new System.Drawing.Point(24, 144);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.simpleButton1.Location = new System.Drawing.Point(84, 150);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(19, 19, 19, 19);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(712, 88);
+            this.simpleButton1.Size = new System.Drawing.Size(600, 75);
             this.simpleButton1.TabIndex = 3;
             this.simpleButton1.Text = "Alış / Satış İşlemleri\r\n";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
@@ -96,9 +96,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(623, 33);
+            this.button1.Location = new System.Drawing.Point(626, 25);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 39);
+            this.button1.Size = new System.Drawing.Size(100, 40);
             this.button1.TabIndex = 6;
             this.button1.Text = "Çıkış";
             this.button1.UseVisualStyleBackColor = true;
