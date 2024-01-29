@@ -40,10 +40,10 @@
             // 
             this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.Location = new System.Drawing.Point(90, 240);
-            this.simpleButton2.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.simpleButton2.Location = new System.Drawing.Point(24, 242);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(569, 75);
+            this.simpleButton2.Size = new System.Drawing.Size(712, 88);
             this.simpleButton2.TabIndex = 1;
             this.simpleButton2.Text = "Depo Durumu";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
@@ -52,21 +52,22 @@
             // 
             this.simpleButton3.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.simpleButton3.Appearance.Options.UseFont = true;
-            this.simpleButton3.Location = new System.Drawing.Point(90, 331);
-            this.simpleButton3.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.simpleButton3.Location = new System.Drawing.Point(24, 338);
+            this.simpleButton3.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
             this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(569, 74);
+            this.simpleButton3.Size = new System.Drawing.Size(712, 88);
             this.simpleButton3.TabIndex = 2;
             this.simpleButton3.Text = "Üyelik İşlemleri\r\n";
+            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
             // simpleButton1
             // 
             this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Location = new System.Drawing.Point(90, 147);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.simpleButton1.Location = new System.Drawing.Point(24, 144);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(569, 77);
+            this.simpleButton1.Size = new System.Drawing.Size(712, 88);
             this.simpleButton1.TabIndex = 3;
             this.simpleButton1.Text = "Alış / Satış İşlemleri\r\n";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
@@ -76,7 +77,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(154, 72);
+            this.label1.Location = new System.Drawing.Point(162, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(187, 34);
             this.label1.TabIndex = 4;
@@ -87,7 +88,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(360, 72);
+            this.label2.Location = new System.Drawing.Point(368, 86);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 34);
             this.label2.TabIndex = 5;
@@ -95,7 +96,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(622, 39);
+            this.button1.Location = new System.Drawing.Point(623, 33);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 39);
             this.button1.TabIndex = 6;

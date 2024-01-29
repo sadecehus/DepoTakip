@@ -35,7 +35,7 @@ namespace example
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             afterlogin al=new afterlogin();
             al.Show();
         }

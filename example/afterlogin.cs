@@ -1,18 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace example
 {
-
     public partial class afterlogin : Form
     {
         private static SqlConnection conn;
@@ -25,44 +17,36 @@ namespace example
             "Data Source=HÜSEYIN\\SQLEXPRESS;Initial Catalog=example;Integrated Security=True";
 
         public static string nameofuser;
-          
+
         public afterlogin()
         {
             InitializeComponent();
             fetchTheName();
             label2.Text = nameofuser;
-            
         }
 
         private void fetchTheName()
         {
-            string sorgu = "Select name_surname from tbl_user_login where username=@username";
+            var sorgu = "Select name_surname from tbl_user_login where username=@username";
             using (conn = new SqlConnection(sqlconn))
             {
                 using (cmd = new SqlCommand(sorgu, conn))
                 {
-                    cmd.Parameters.AddWithValue("@username",LoginForm.oturum);
+                    cmd.Parameters.AddWithValue("@username", LoginForm.oturum);
                     conn.Open();
                     using (reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())
-                        {
                             nameofuser = reader["name_surname"].ToString();
-                            
-                        }
                         else
-                        {
                             MessageBox.Show("Bulunamadı!");
-                        }
-
                     }
                 }
-                
             }
         }
+
         private void afterlogin_Load(object sender, EventArgs e)
         {
-        
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -72,16 +56,23 @@ namespace example
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            WelcomeForm wf = new WelcomeForm(nameofuser);
+            Hide();
+            var wf = new WelcomeForm(nameofuser);
             wf.Show();
         }
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            DepoDurum dd =new DepoDurum();
+            Hide();
+            var dd = new DepoDurum();
             dd.Show();
+        }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            usersettings usersettings = new usersettings();
+            this.Hide();
+            usersettings.Show();
         }
     }
 }

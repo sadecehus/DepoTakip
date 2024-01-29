@@ -285,7 +285,13 @@ namespace example
 
         private void label10_Click(object sender, EventArgs e)
         {
+        }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var af = new afterlogin();
+            Close();
+            af.Show();
         }
     }
 }
