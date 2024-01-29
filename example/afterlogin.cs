@@ -76,5 +76,12 @@ namespace example
             WelcomeForm wf = new WelcomeForm(nameofuser);
             wf.Show();
         }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DepoDurum dd =new DepoDurum();
+            dd.Show();
+        }
     }
 }
