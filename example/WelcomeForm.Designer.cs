@@ -272,10 +272,10 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Oswald", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.Location = new System.Drawing.Point(1147, 9);
+            this.label10.Font = new System.Drawing.Font("Arial", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label10.Location = new System.Drawing.Point(1166, 24);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(217, 55);
+            this.label10.Size = new System.Drawing.Size(238, 42);
             this.label10.TabIndex = 27;
             this.label10.Text = "Son İşlemler";
             this.label10.Click += new System.EventHandler(this.label10_Click);
