@@ -3,6 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.IO;
+using DevExpress.Utils.Diagnostics;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 
@@ -373,6 +374,14 @@ namespace example
                     MessageBox.Show("PDF kaydedilemedi: " + ex.Message);
                 }
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e) 
+        {
+            Form1 form1 = new Form1();
+            Rapor rapor = new Rapor();
+            rapor.SetParameterValue(0,LoginForm.oturum);
+            form1.Show();
         }
     }
 }
