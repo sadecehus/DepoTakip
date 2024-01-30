@@ -106,8 +106,10 @@ namespace example
 
             using (conn = new SqlConnection(sqlconn))
             {
-                var sorgu = "Select Round(TotalBakiye,2) from v_TotalBakiye";
+                //burası
+                var sorgu = "Select Round(TotalBakiye,2) from v_UserTotalBalances where username=@username";
                 var command = new SqlCommand(sorgu, conn);
+                command.Parameters.AddWithValue("@username", LoginForm.oturum);
                 conn.Open();
                 reader = command.ExecuteReader();
                 if (reader.Read()) totalCountLabel.Text = reader[0].ToString();
@@ -116,21 +118,21 @@ namespace example
             }
 
             ürünAdıComboBox.SelectedIndexChanged += ürünAdıComboBox_SelectedIndexChanged;
-            database.fillGrid(dataGridView1, "tbl_islem");
-            //try
-            //{
-            //    conn = new SqlConnection(sqlconn);
-            //    adapter = new SqlDataAdapter("select * from tbl_islem where username="+LoginForm.oturum+"", conn);
-            //    ds = new DataSet();
-            //    conn.Open();
-            //    adapter.Fill(ds, "tbl_islem");
-            //    dataGridView1.DataSource = ds.Tables["tbl_islem"];
-            //    conn.Close();
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("An error occurred: " + ex.Message);
-            //}
+            // database.fillGrid(dataGridView1, "tbl_islem");
+            try
+            {
+                conn = new SqlConnection(sqlconn);
+                adapter = new SqlDataAdapter("select * from tbl_islem where username=" + LoginForm.oturum + "", conn);
+                ds = new DataSet();
+                conn.Open();
+                adapter.Fill(ds, "tbl_islem");
+                dataGridView1.DataSource = ds.Tables["tbl_islem"];
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
         }
 
         //İşlemlerden sonra dataGridViewi günceller
@@ -161,8 +163,10 @@ namespace example
             {
                 using (conn = new SqlConnection(sqlconn))
                 {
-                    var sorgu = "Select Round(TotalBakiye,2) from v_TotalBakiye";
+                    //burası
+                    var sorgu = "Select Round(TotalBakiye,2) from v_UserTotalBalances where username=@username";
                     var command = new SqlCommand(sorgu, conn);
+                    command.Parameters.AddWithValue("@username",LoginForm.oturum);
                     conn.Open();
                     var result = command.ExecuteScalar();
                     totalCountLabel.Text = result != null ? result.ToString() : "0";
@@ -314,9 +318,10 @@ namespace example
         {
             using (conn = new SqlConnection(sqlconn))
             {
-                var sorgu = "SELECT SUM(product_count) FROM tbl_islem WHERE product = @productName";
+                var sorgu = "SELECT [Total Product] FROM v_ÜrünTotal WHERE ürünAdı = @productName AND username=@username";
                 var command = new SqlCommand(sorgu, conn);
                 command.Parameters.AddWithValue("@productName", productName);
+                command.Parameters.AddWithValue("@username", LoginForm.oturum);
                 conn.Open();
                 var result = command.ExecuteScalar();
                 if (result != null)
