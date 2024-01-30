@@ -179,21 +179,21 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Oswald", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label6.Location = new System.Drawing.Point(37, 427);
+            this.label6.Location = new System.Drawing.Point(25, 436);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(272, 55);
+            this.label6.Size = new System.Drawing.Size(162, 35);
             this.label6.TabIndex = 18;
-            this.label6.Text = "$ Total Money $";
+            this.label6.Text = "Bakiyeniz:";
             // 
             // totalCountLabel
             // 
             this.totalCountLabel.AutoSize = true;
-            this.totalCountLabel.Font = new System.Drawing.Font("Oswald", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.totalCountLabel.Location = new System.Drawing.Point(98, 494);
+            this.totalCountLabel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.totalCountLabel.Location = new System.Drawing.Point(274, 436);
             this.totalCountLabel.Name = "totalCountLabel";
-            this.totalCountLabel.Size = new System.Drawing.Size(113, 55);
+            this.totalCountLabel.Size = new System.Drawing.Size(100, 35);
             this.totalCountLabel.TabIndex = 19;
             this.totalCountLabel.Text = "label1";
             // 
