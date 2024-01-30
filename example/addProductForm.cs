@@ -41,8 +41,10 @@ namespace example
                         {
                             MessageBox.Show("Ürün Eklendi...");
                            
-                            Application.Restart(); 
-                            Close();
+                            this.Close();
+
+                            WelcomeForm wf = new WelcomeForm(afterlogin.nameofuser);
+                            wf.Show();
                         }
                         else
                         {

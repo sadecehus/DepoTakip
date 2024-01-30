@@ -28,6 +28,7 @@ namespace example
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.Rapor1 = new example.Rapor();
+            Rapor1.SetParameterValue(0,LoginForm.oturum);
             this.SuspendLayout();
             // 
             // crystalReportViewer1

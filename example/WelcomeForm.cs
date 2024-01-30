@@ -123,16 +123,16 @@ namespace example
             try
             {
                 conn = new SqlConnection(sqlconn);
-                adapter = new SqlDataAdapter("select * from tbl_islem where username=" + LoginForm.oturum + "", conn);
+                adapter = new SqlDataAdapter("select * from tbl_islem where username='"+LoginForm.oturum + "'", conn);
                 ds = new DataSet();
                 conn.Open();
                 adapter.Fill(ds, "tbl_islem");
                 dataGridView1.DataSource = ds.Tables["tbl_islem"];
                 conn.Close();
             }
-            catch (Exception ex)
+            catch (Exception )
             {
-                MessageBox.Show("An error occurred: " + ex.Message);
+                MessageBox.Show("! Henüz Bir İşlem Kaydınız Yok!" );
             }
         }
 
@@ -143,7 +143,7 @@ namespace example
             {
                 using (conn = new SqlConnection(sqlconn))
                 {
-                    var sorgu = "SELECT * FROM tbl_islem";
+                    var sorgu = "SELECT * FROM tbl_islem where username='"+LoginForm.oturum+"'";
                     var command = new SqlCommand(sorgu, conn);
                     var adapter = new SqlDataAdapter(command);
                     var dt = new DataTable();
@@ -298,6 +298,7 @@ namespace example
         private void button1_Click(object sender, EventArgs e)
         {
             var addProductForm = new addProductForm();
+            this.Hide();
             addProductForm.Show();
         }
 
