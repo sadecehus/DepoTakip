@@ -16,12 +16,10 @@ namespace example
         public static string sqlconn =
             "Data Source=HÜSEYIN\\SQLEXPRESS;Initial Catalog=example;Integrated Security=True";
 
-        
-        
+
         public addProductForm()
         {
             InitializeComponent();
-           
         }
 
         private void addButton_Click(object sender, EventArgs e)
@@ -40,10 +38,10 @@ namespace example
                         if (result > 0)
                         {
                             MessageBox.Show("Ürün Eklendi...");
-                           
-                            this.Close();
 
-                            WelcomeForm wf = new WelcomeForm(afterlogin.nameofuser);
+                            Close();
+
+                            var wf = new WelcomeForm(afterlogin.nameofuser);
                             wf.Show();
                         }
                         else
@@ -64,8 +62,8 @@ namespace example
 
         private void cancelButton_Click(object sender, EventArgs e)
         {
-            this.Close();
-            WelcomeForm welcomeForm = new WelcomeForm(afterlogin.nameofuser);
+            Close();
+            var welcomeForm = new WelcomeForm(afterlogin.nameofuser);
             welcomeForm.Show();
         }
     }

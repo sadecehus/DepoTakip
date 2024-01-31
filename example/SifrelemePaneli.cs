@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Security.Cryptography;
-using System.Text;
 using System.Windows.Forms;
 
 namespace example
@@ -11,6 +9,7 @@ namespace example
         {
             InitializeComponent();
         }
+
         private void sifreBox_TextChanged(object sender, EventArgs e)
         {
             md5Box.Text = sifreleme.md5sifreleme(sifreBox.Text);

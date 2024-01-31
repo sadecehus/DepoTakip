@@ -70,8 +70,8 @@ namespace example
 
         private void simpleButton3_Click(object sender, EventArgs e)
         {
-            usersettings usersettings = new usersettings();
-            this.Hide();
+            var usersettings = new usersettings();
+            Hide();
             usersettings.Show();
         }
     }

@@ -23,16 +23,17 @@ namespace example
 
         private void exitButton_Click(object sender, EventArgs e)
         {
-          this.Close();
-          LoginForm lf = new LoginForm();
-          lf.Show();
+            Close();
+            var lf = new LoginForm();
+            lf.Show();
         }
 
         private void signupButton_Click(object sender, EventArgs e)
         {
             try
             {
-                var sorgu = "INSERT INTO tbl_user_login (username, password, name_surname) VALUES (@username, @password, @fullname)";
+                var sorgu =
+                    "INSERT INTO tbl_user_login (username, password, name_surname) VALUES (@username, @password, @fullname)";
                 using (var conn = new SqlConnection(sqlconn))
                 {
                     using (var cmd = new SqlCommand(sorgu, conn))
@@ -53,7 +54,6 @@ namespace example
                         {
                             MessageBox.Show("Bir sorun çıktı");
                         }
-
                     }
                 }
             }

@@ -70,16 +70,18 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(221, 143);
+            this.textBox2.Location = new System.Drawing.Point(221, 131);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 22);
             this.textBox2.TabIndex = 2;
             // 
             // alisBox
             // 
-            this.alisBox.Location = new System.Drawing.Point(98, 293);
+            this.alisBox.BackgroundImage = global::example.Properties.Resources.button1;
+            this.alisBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.alisBox.Location = new System.Drawing.Point(93, 293);
             this.alisBox.Name = "alisBox";
-            this.alisBox.Size = new System.Drawing.Size(100, 23);
+            this.alisBox.Size = new System.Drawing.Size(120, 40);
             this.alisBox.TabIndex = 6;
             this.alisBox.Text = "Ürün Alış";
             this.alisBox.UseVisualStyleBackColor = true;
@@ -87,9 +89,11 @@
             // 
             // satisBox
             // 
-            this.satisBox.Location = new System.Drawing.Point(341, 293);
+            this.satisBox.BackgroundImage = global::example.Properties.Resources.button1;
+            this.satisBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.satisBox.Location = new System.Drawing.Point(333, 293);
             this.satisBox.Name = "satisBox";
-            this.satisBox.Size = new System.Drawing.Size(100, 23);
+            this.satisBox.Size = new System.Drawing.Size(120, 40);
             this.satisBox.TabIndex = 7;
             this.satisBox.Text = "Ürün Satış";
             this.satisBox.UseVisualStyleBackColor = true;
@@ -106,18 +110,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(111, 124);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(93, 103);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 16);
+            this.label1.Size = new System.Drawing.Size(88, 25);
             this.label1.TabIndex = 9;
             this.label1.Text = "Ürün Adı";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(235, 124);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(216, 103);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 16);
+            this.label2.Size = new System.Drawing.Size(116, 25);
             this.label2.TabIndex = 10;
             this.label2.Text = "Ürün Miktarı";
             // 
@@ -145,7 +151,7 @@
             // 
             // fiyatTextbox
             // 
-            this.fiyatTextbox.Location = new System.Drawing.Point(353, 143);
+            this.fiyatTextbox.Location = new System.Drawing.Point(351, 131);
             this.fiyatTextbox.Name = "fiyatTextbox";
             this.fiyatTextbox.Size = new System.Drawing.Size(100, 22);
             this.fiyatTextbox.TabIndex = 14;
@@ -153,16 +159,17 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(364, 124);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(348, 103);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 16);
+            this.label5.Size = new System.Drawing.Size(105, 25);
             this.label5.TabIndex = 15;
             this.label5.Text = "Ürün Fiyatı";
             // 
             // ürünAdıComboBox
             // 
             this.ürünAdıComboBox.FormattingEnabled = true;
-            this.ürünAdıComboBox.Location = new System.Drawing.Point(93, 143);
+            this.ürünAdıComboBox.Location = new System.Drawing.Point(93, 131);
             this.ürünAdıComboBox.Name = "ürünAdıComboBox";
             this.ürünAdıComboBox.Size = new System.Drawing.Size(105, 24);
             this.ürünAdıComboBox.TabIndex = 16;
@@ -201,10 +208,11 @@
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(93, 849);
+            this.button2.BackgroundImage = global::example.Properties.Resources.button1;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button2.Location = new System.Drawing.Point(93, 833);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 60);
+            this.button2.Size = new System.Drawing.Size(120, 40);
             this.button2.TabIndex = 21;
             this.button2.Text = "Çıkış";
             this.button2.UseVisualStyleBackColor = true;
@@ -273,10 +281,11 @@
             // 
             // button3
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button3.Location = new System.Drawing.Point(303, 849);
+            this.button3.BackgroundImage = global::example.Properties.Resources.button1;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button3.Location = new System.Drawing.Point(333, 833);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(150, 60);
+            this.button3.Size = new System.Drawing.Size(120, 40);
             this.button3.TabIndex = 28;
             this.button3.Text = "Geri";
             this.button3.UseVisualStyleBackColor = true;
@@ -307,7 +316,9 @@
             // button6
             // 
             this.button6.BackColor = System.Drawing.SystemColors.Control;
+            this.button6.BackgroundImage = global::example.Properties.Resources.button1;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button6.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button6.Location = new System.Drawing.Point(158, 607);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(221, 40);
@@ -319,6 +330,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.BackgroundImage = global::example.Properties.Resources.button1;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.Location = new System.Drawing.Point(158, 533);
             this.button1.Name = "button1";

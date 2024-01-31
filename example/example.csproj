@@ -223,6 +223,8 @@
   <ItemGroup>
     <Content Include="138manfarmer2_100718.ico" />
     <Content Include="farm.ico" />
+    <None Include="Resources\button1.png" />
+    <None Include="Resources\button.png" />
     <None Include="Resources\Başlıksız-12.png" />
     <None Include="Resources\Adsız tasarım %288%29.png" />
     <None Include="Resources\Adsız tasarım %287%29.png" />

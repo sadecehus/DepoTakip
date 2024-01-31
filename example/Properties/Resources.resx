@@ -118,22 +118,28 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Adsız tasarım (8)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Adsız tasarım (8).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Başlıksız-12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Başlıksız-12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Adsız tasarım (7)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Adsız tasarım (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Adsız tasarım (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Adsız tasarım (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Başlıksız-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Başlıksız-12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Adsız tasarım (8)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Adsız tasarım (8).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Adsız tasarım (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Adsız tasarım (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Başlıksız-11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Başlıksız-12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Başlıksız-12" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Başlıksız-12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="button1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

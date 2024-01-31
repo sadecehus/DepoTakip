@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace example
@@ -21,6 +15,7 @@ namespace example
 
         public static string sqlconn =
             "Data Source=HÜSEYIN\\SQLEXPRESS;Initial Catalog=example;Integrated Security=True";
+
         public usersettings()
         {
             InitializeComponent();
@@ -28,28 +23,29 @@ namespace example
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
-            afterlogin afterlogin = new afterlogin();
+            Close();
+            var afterlogin = new afterlogin();
             afterlogin.Show();
         }
+
         public void exsifrekontrol()
         {
             var sorgu = "Select password from tbl_user_login where username = @username AND password = @password";
-            using (SqlConnection conn = new SqlConnection(sqlconn))
+            using (var conn = new SqlConnection(sqlconn))
             {
-                using (SqlCommand cmd = new SqlCommand(sorgu, conn))
+                using (var cmd = new SqlCommand(sorgu, conn))
                 {
                     cmd.Parameters.AddWithValue("@username", LoginForm.oturum);
                     cmd.Parameters.AddWithValue("@password", sifreleme.md5sifreleme(textBox1.Text));
                     conn.Open();
-                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    using (var reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())
                         {
                             var sorgu2 = "UPDATE tbl_user_login SET password = @newpassword WHERE username = @username";
-                            using (SqlConnection conn2 = new SqlConnection(sqlconn))
+                            using (var conn2 = new SqlConnection(sqlconn))
                             {
-                                using (SqlCommand cmd2 = new SqlCommand(sorgu2, conn2))
+                                using (var cmd2 = new SqlCommand(sorgu2, conn2))
                                 {
                                     cmd2.Parameters.AddWithValue("@newpassword", sifreleme.md5sifreleme(textBox2.Text));
                                     cmd2.Parameters.AddWithValue("@username", LoginForm.oturum);
@@ -58,8 +54,8 @@ namespace example
                                     if (result > 0)
                                     {
                                         MessageBox.Show("Şifre Değiştirildi Tekrar Giriş Yapın");
-                                        this.Close();
-                                        LoginForm lf = new LoginForm();
+                                        Close();
+                                        var lf = new LoginForm();
                                         lf.Show();
                                     }
                                     else
@@ -81,10 +77,7 @@ namespace example
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox2.Text == textBox3.Text)
-            {
-                exsifrekontrol();
-            }
+            if (textBox2.Text == textBox3.Text) exsifrekontrol();
         }
     }
 }

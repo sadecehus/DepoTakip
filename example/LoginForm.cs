@@ -21,23 +21,18 @@ namespace example
         public LoginForm()
         {
             InitializeComponent();
-            this.KeyPreview = true;
-            this.KeyPress += new KeyPressEventHandler(LoginForm_KeyPress);
+            KeyPreview = true;
+            KeyPress += LoginForm_KeyPress;
         }
 
         private void LoginForm_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Eğer basılan tuş Enter ise
             if (e.KeyChar == (char)Keys.Enter)
-            {
                 // LoginButton_Click metodunu çağır
                 LoginButton_Click(this, new EventArgs());
-            }
 
-            if (e.KeyChar == (char)Keys.Escape)
-            {
-                exitButton_Click(this,new EventArgs());
-            }
+            if (e.KeyChar == (char)Keys.Escape) exitButton_Click(this, new EventArgs());
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -62,12 +57,12 @@ namespace example
                         {
                             var nameSurname = reader["name_surname"].ToString();
                             MessageBox.Show("Giriş Başarılı...");
-                            oturum = usernameTextbox.Text; 
+                            oturum = usernameTextbox.Text;
                             var al = new afterlogin();
                             var wf = new WelcomeForm(nameSurname);
-                           this. Hide();
-                           al.Show();
-                          // wf.Show();
+                            Hide();
+                            al.Show();
+                            // wf.Show();
                         }
                         else
                         {

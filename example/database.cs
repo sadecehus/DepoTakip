@@ -1,26 +1,22 @@
-﻿using System;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.Drawing.Drawing2D;
-using System.Security.Cryptography;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
 using System.Windows.Forms;
-
 
 namespace example
 {
     internal class database
-    {   
+    {
         private static SqlConnection conn;
         private static SqlCommand cmd;
         private static SqlDataAdapter adapter;
         private static DataSet ds;
+
         public static string sqlconn =
             "Data Source=HÜSEYIN\\SQLEXPRESS;Initial Catalog=example;Integrated Security=True";
 
 
-        public static bool controlConnection() {
+        public static bool controlConnection()
+        {
             //bağlı olunan databaseyi değiştirmek için alttaki sqlconnu değiştir
             using (conn = new SqlConnection(sqlconn))
             {
@@ -37,7 +33,8 @@ namespace example
             }
         }
 
-        public static DataGridView fillGrid(DataGridView ourDataGridView, string tableName) {
+        public static DataGridView fillGrid(DataGridView ourDataGridView, string tableName)
+        {
             try
             {
                 conn = new SqlConnection(sqlconn);
@@ -52,8 +49,8 @@ namespace example
             {
                 MessageBox.Show("An error occurred: " + ex.Message);
             }
+
             return ourDataGridView;
         }
-       
     }
 }
