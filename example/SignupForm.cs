@@ -57,9 +57,9 @@ namespace example
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Hata: " + ex.Message);
+                MessageBox.Show("Hata: Bu kullanıcı adı mevcut");
             }
         }
     }

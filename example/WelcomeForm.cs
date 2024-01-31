@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Windows.Forms;
 using System.IO;
-using DevExpress.Utils.Diagnostics;
+using System.Windows.Forms;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
-
 
 namespace example
 {
@@ -27,45 +25,38 @@ namespace example
             InitializeComponent();
             nameLabel.Text = nameSurname;
             DisplayUsername(nameSurname);
-
         }
 
         public void ExportDataGridViewToPdf(DataGridView dgv, string filename)
         {
             // PDF dokümanını oluştur
-            Document document = new Document();
-            PdfWriter writer = PdfWriter.GetInstance(document, new FileStream(filename, FileMode.Create));
+            var document = new Document();
+            var writer = PdfWriter.GetInstance(document, new FileStream(filename, FileMode.Create));
             document.Open();
 
             // Tabloyu PDF'e aktar
-            PdfPTable table = new PdfPTable(dgv.Columns.Count);
+            var table = new PdfPTable(dgv.Columns.Count);
             // Başlık ekle
             foreach (DataGridViewColumn column in dgv.Columns)
             {
-                PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
+                var cell = new PdfPCell(new Phrase(column.HeaderText));
                 table.AddCell(cell);
             }
+
             // Satırları ekle
             foreach (DataGridViewRow row in dgv.Rows)
-            {
-                foreach (DataGridViewCell cell in row.Cells)
-                {
-                    // Null kontrolü yapılıyor
-                    if (cell.Value != null)
-                    {
-                        table.AddCell(new Phrase(cell.Value.ToString()));
-                    }
-                    else
-                    {
-                        // Hücre değeri null ise boş bir hücre ekleyin
-                        table.AddCell(new Phrase(""));
-                    }
-                }
-            }
+            foreach (DataGridViewCell cell in row.Cells)
+                // Null kontrolü yapılıyor
+                if (cell.Value != null)
+                    table.AddCell(new Phrase(cell.Value.ToString()));
+                else
+                    // Hücre değeri null ise boş bir hücre ekleyin
+                    table.AddCell(new Phrase(""));
 
             document.Add(table);
             document.Close();
         }
+
         private void DisplayUsername(string nameSurname)
         {
             var sqlQuery = "SELECT username FROM tbl_user_login WHERE name_surname = @nameSurname";
@@ -123,16 +114,16 @@ namespace example
             try
             {
                 conn = new SqlConnection(sqlconn);
-                adapter = new SqlDataAdapter("select * from tbl_islem where username='"+LoginForm.oturum + "'", conn);
+                adapter = new SqlDataAdapter("select * from tbl_islem where username='" + LoginForm.oturum + "'", conn);
                 ds = new DataSet();
                 conn.Open();
                 adapter.Fill(ds, "tbl_islem");
                 dataGridView1.DataSource = ds.Tables["tbl_islem"];
                 conn.Close();
             }
-            catch (Exception )
+            catch (Exception)
             {
-                MessageBox.Show("! Henüz Bir İşlem Kaydınız Yok!" );
+                MessageBox.Show("! Henüz Bir İşlem Kaydınız Yok!");
             }
         }
 
@@ -143,7 +134,7 @@ namespace example
             {
                 using (conn = new SqlConnection(sqlconn))
                 {
-                    var sorgu = "SELECT * FROM tbl_islem where username='"+LoginForm.oturum+"'";
+                    var sorgu = "SELECT * FROM tbl_islem where username='" + LoginForm.oturum + "'";
                     var command = new SqlCommand(sorgu, conn);
                     var adapter = new SqlDataAdapter(command);
                     var dt = new DataTable();
@@ -157,7 +148,7 @@ namespace example
             }
         }
 
-  
+
         private void UpdateTotalCountLabel()
         {
             try
@@ -167,7 +158,7 @@ namespace example
                     //burası
                     var sorgu = "Select Round(TotalBakiye,2) from v_UserTotalBalances where username=@username";
                     var command = new SqlCommand(sorgu, conn);
-                    command.Parameters.AddWithValue("@username",LoginForm.oturum);
+                    command.Parameters.AddWithValue("@username", LoginForm.oturum);
                     conn.Open();
                     var result = command.ExecuteScalar();
                     totalCountLabel.Text = result != null ? result.ToString() : "0";
@@ -213,7 +204,6 @@ namespace example
                                 MessageBox.Show("Alış Başarılı");
                                 UpdateDataGridView();
                                 UpdateTotalCountLabel();
-                                
                             }
                             else
                             {
@@ -299,7 +289,7 @@ namespace example
         private void button1_Click(object sender, EventArgs e)
         {
             var addProductForm = new addProductForm();
-            this.Hide();
+            Hide();
             addProductForm.Show();
         }
 
@@ -322,7 +312,8 @@ namespace example
         {
             using (conn = new SqlConnection(sqlconn))
             {
-                var sorgu = "SELECT [Total Product] FROM v_ÜrünTotal WHERE ürünAdı = @productName AND username=@username";
+                var sorgu =
+                    "SELECT [Total Product] FROM v_ÜrünTotal WHERE ürünAdı = @productName AND username=@username";
                 var command = new SqlCommand(sorgu, conn);
                 command.Parameters.AddWithValue("@productName", productName);
                 command.Parameters.AddWithValue("@username", LoginForm.oturum);
@@ -361,14 +352,13 @@ namespace example
         private void button4_Click(object sender, EventArgs e)
         {
             // SaveFileDialog kullanarak kullanıcının dosyayı nereye kaydedeceğini seçmesini sağlayın
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            var saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "PDF Files|*.pdf";
             saveFileDialog.Title = "PDF olarak kaydet";
             saveFileDialog.ShowDialog();
 
             // Eğer kullanıcı dosya adı seçtiyse PDF oluşturma işlemine devam edin
             if (saveFileDialog.FileName != "")
-            {
                 try
                 {
                     ExportDataGridViewToPdf(dataGridView1, saveFileDialog.FileName);
@@ -378,23 +368,22 @@ namespace example
                 {
                     MessageBox.Show("PDF kaydedilemedi: " + ex.Message);
                 }
-            }
         }
 
         // Button 5 = Rapor Görüntüle Buttonu
-        private void button5_Click(object sender, EventArgs e) 
+        private void button5_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
-            Rapor rapor = new Rapor();
-            rapor.SetParameterValue(0,LoginForm.oturum);
+            var form1 = new Form1();
+            var rapor = new Rapor();
+            rapor.SetParameterValue(0, LoginForm.oturum);
             form1.Show();
         }
 
         //Button 6 = Hasılat Ekle Buttonu
         private void button6_Click(object sender, EventArgs e)
         {
-            HasılatEkle he = new HasılatEkle();
-            this.Hide();
+            var he = new HasılatEkle();
+            Hide();
             he.ShowDialog();
         }
     }
