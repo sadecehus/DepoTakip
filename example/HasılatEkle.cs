@@ -49,7 +49,7 @@ namespace example
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var sorgu = "INSERT INTO tbl_islem (product, product_count, product_pricie, islemTarih, username) VALUES (@ürünad, @ürünmiktar, 0,@date,@username);";
+            var sorgu = "INSERT INTO tbl_islem (product, product_count, product_pricie, islemTarih, username, islemAciklama) VALUES (@ürünad, @ürünmiktar, 0,@date,@username, 'Hasılat Eklendi');";
             using (var conn = new SqlConnection(sqlconn))
             {
                 using (var cmd = new SqlCommand(sorgu,conn))
