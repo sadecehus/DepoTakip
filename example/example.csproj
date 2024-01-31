@@ -54,11 +54,16 @@
     <Reference Include="DevExpress.XtraLayout.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraNavBar.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
       <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
@@ -223,6 +228,15 @@
   <ItemGroup>
     <Content Include="138manfarmer2_100718.ico" />
     <Content Include="farm.ico" />
+    <None Include="Resources\icons8-password-40.png" />
+    <None Include="Resources\icons8-user-40.png" />
+    <None Include="Resources\icons8-close-32.png" />
+    <None Include="Resources\Custom-Icon-Design-Flatastic-1-Delete.48.png" />
+    <None Include="Resources\Icons8-Ios7-User-Interface-Password.48.png" />
+    <None Include="Resources\Custom-Icon-Design-Silky-Line-User-User.48.png" />
+    <None Include="Resources\Icons8-Ios7-User-Interface-Password.512.png" />
+    <None Include="Resources\Custom-Icon-Design-Silky-Line-User-User.512.png" />
+    <None Include="Resources\farm.png" />
     <None Include="Resources\button1.png" />
     <None Include="Resources\button.png" />
     <None Include="Resources\Başlıksız-12.png" />

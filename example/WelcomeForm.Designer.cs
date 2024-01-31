@@ -77,26 +77,27 @@
             // 
             // alisBox
             // 
-            this.alisBox.BackgroundImage = global::example.Properties.Resources.button1;
+            this.alisBox.BackColor = System.Drawing.SystemColors.Control;
             this.alisBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.alisBox.ForeColor = System.Drawing.SystemColors.ControlText;
             this.alisBox.Location = new System.Drawing.Point(93, 293);
             this.alisBox.Name = "alisBox";
             this.alisBox.Size = new System.Drawing.Size(120, 40);
             this.alisBox.TabIndex = 6;
             this.alisBox.Text = "Ürün Alış";
-            this.alisBox.UseVisualStyleBackColor = true;
+            this.alisBox.UseVisualStyleBackColor = false;
             this.alisBox.Click += new System.EventHandler(this.alisBox_Click);
             // 
             // satisBox
             // 
-            this.satisBox.BackgroundImage = global::example.Properties.Resources.button1;
+            this.satisBox.BackColor = System.Drawing.SystemColors.Control;
             this.satisBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.satisBox.Location = new System.Drawing.Point(333, 293);
             this.satisBox.Name = "satisBox";
             this.satisBox.Size = new System.Drawing.Size(120, 40);
             this.satisBox.TabIndex = 7;
             this.satisBox.Text = "Ürün Satış";
-            this.satisBox.UseVisualStyleBackColor = true;
+            this.satisBox.UseVisualStyleBackColor = false;
             this.satisBox.Click += new System.EventHandler(this.satisBox_Click);
             // 
             // richTextBox1
@@ -208,14 +209,14 @@
             // 
             // button2
             // 
-            this.button2.BackgroundImage = global::example.Properties.Resources.button1;
+            this.button2.BackColor = System.Drawing.SystemColors.Control;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.Location = new System.Drawing.Point(93, 833);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(120, 40);
             this.button2.TabIndex = 21;
             this.button2.Text = "Çıkış";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // productnamelabel
@@ -281,14 +282,15 @@
             // 
             // button3
             // 
-            this.button3.BackgroundImage = global::example.Properties.Resources.button1;
+            this.button3.BackColor = System.Drawing.SystemColors.Control;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button3.Location = new System.Drawing.Point(333, 833);
             this.button3.Name = "button3";
+            this.button3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.button3.Size = new System.Drawing.Size(120, 40);
             this.button3.TabIndex = 28;
             this.button3.Text = "Geri";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
@@ -316,7 +318,6 @@
             // button6
             // 
             this.button6.BackColor = System.Drawing.SystemColors.Control;
-            this.button6.BackgroundImage = global::example.Properties.Resources.button1;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button6.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button6.Location = new System.Drawing.Point(158, 607);
@@ -330,7 +331,6 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.BackgroundImage = global::example.Properties.Resources.button1;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.Location = new System.Drawing.Point(158, 533);
             this.button1.Name = "button1";

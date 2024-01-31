@@ -81,5 +81,10 @@ namespace example
             var sf = new SignupForm();
             sf.ShowDialog();
         }
+
+        private void guna2PictureBox4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
