@@ -94,7 +94,7 @@
             this.satisBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.satisBox.Location = new System.Drawing.Point(333, 293);
             this.satisBox.Name = "satisBox";
-            this.satisBox.Size = new System.Drawing.Size(120, 40);
+            this.satisBox.Size = new System.Drawing.Size(125, 40);
             this.satisBox.TabIndex = 7;
             this.satisBox.Text = "Ürün Satış";
             this.satisBox.UseVisualStyleBackColor = false;
