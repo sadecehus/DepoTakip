@@ -37,8 +37,9 @@
             // header
             // 
             this.header.AutoSize = true;
+            this.header.BackColor = System.Drawing.Color.Transparent;
             this.header.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.header.Location = new System.Drawing.Point(216, 114);
+            this.header.Location = new System.Drawing.Point(178, 121);
             this.header.Name = "header";
             this.header.Size = new System.Drawing.Size(352, 29);
             this.header.TabIndex = 0;
@@ -47,7 +48,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.Location = new System.Drawing.Point(232, 156);
+            this.textBox1.Location = new System.Drawing.Point(192, 202);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(320, 36);
             this.textBox1.TabIndex = 1;
@@ -55,7 +56,7 @@
             // addButton
             // 
             this.addButton.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.addButton.Location = new System.Drawing.Point(429, 214);
+            this.addButton.Location = new System.Drawing.Point(389, 260);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(123, 45);
             this.addButton.TabIndex = 3;
@@ -66,11 +67,11 @@
             // cancelButton
             // 
             this.cancelButton.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cancelButton.Location = new System.Drawing.Point(232, 214);
+            this.cancelButton.Location = new System.Drawing.Point(192, 260);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(123, 45);
             this.cancelButton.TabIndex = 4;
-            this.cancelButton.Text = "vazgeç";
+            this.cancelButton.Text = "Vazgeç";
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
@@ -78,11 +79,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = global::example.Properties.Resources.Adsız_tasarım__8_;
+            this.ClientSize = new System.Drawing.Size(732, 453);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.header);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "addProductForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "addProductForm";

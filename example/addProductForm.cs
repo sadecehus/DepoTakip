@@ -64,7 +64,9 @@ namespace example
 
         private void cancelButton_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
+            WelcomeForm welcomeForm = new WelcomeForm(afterlogin.nameofuser);
+            welcomeForm.Show();
         }
     }
 }

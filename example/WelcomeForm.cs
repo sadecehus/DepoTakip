@@ -97,7 +97,7 @@ namespace example
         {
             using (conn = new SqlConnection(sqlconn))
             {
-                var sorgu = "Select * from tbl_products";
+                var sorgu = "Select ürünAdı from tbl_products";
                 var command = new SqlCommand(sorgu, conn);
                 conn.Open();
                 reader = command.ExecuteReader();
@@ -295,6 +295,7 @@ namespace example
                 MessageBox.Show("HATA: ELİNİZDE YETERLİ ÜRÜN YOK");
         }
 
+        //Ürün Ekle butonu
         private void button1_Click(object sender, EventArgs e)
         {
             var addProductForm = new addProductForm();
@@ -302,6 +303,7 @@ namespace example
             addProductForm.Show();
         }
 
+        //Button2= Çıkış butonu
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -347,6 +349,7 @@ namespace example
         {
         }
 
+        //Button3= Geri Dön Butonu
         private void button3_Click(object sender, EventArgs e)
         {
             var af = new afterlogin();
@@ -354,6 +357,7 @@ namespace example
             af.Show();
         }
 
+        //Button4 =Pdf Olarak kaydet butonu
         private void button4_Click(object sender, EventArgs e)
         {
             // SaveFileDialog kullanarak kullanıcının dosyayı nereye kaydedeceğini seçmesini sağlayın
@@ -377,12 +381,21 @@ namespace example
             }
         }
 
+        // Button 5 = Rapor Görüntüle Buttonu
         private void button5_Click(object sender, EventArgs e) 
         {
             Form1 form1 = new Form1();
             Rapor rapor = new Rapor();
             rapor.SetParameterValue(0,LoginForm.oturum);
             form1.Show();
+        }
+
+        //Button 6 = Hasılat Ekle Buttonu
+        private void button6_Click(object sender, EventArgs e)
+        {
+            HasılatEkle he = new HasılatEkle();
+            this.Hide();
+            he.ShowDialog();
         }
     }
 }
