@@ -340,7 +340,7 @@ namespace example
         {
         }
 
-        
+
         // Button 5 = Rapor Görüntüle Buttonu
         private void button5_Click(object sender, EventArgs e)
         {
@@ -525,7 +525,6 @@ namespace example
 
         private void label6_Click(object sender, EventArgs e)
         {
-
         }
     }
 }

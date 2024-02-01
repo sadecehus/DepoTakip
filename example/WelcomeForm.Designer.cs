@@ -98,7 +98,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox2.Location = new System.Drawing.Point(257, 158);
+            this.textBox2.Location = new System.Drawing.Point(241, 158);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(121, 34);
             this.textBox2.TabIndex = 2;
@@ -106,7 +106,7 @@
             // richTextBox1
             // 
             this.richTextBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.richTextBox1.Location = new System.Drawing.Point(90, 200);
+            this.richTextBox1.Location = new System.Drawing.Point(74, 200);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(412, 96);
             this.richTextBox1.TabIndex = 8;
@@ -117,7 +117,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(121, 124);
+            this.label1.Location = new System.Drawing.Point(105, 124);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 28);
             this.label1.TabIndex = 9;
@@ -128,7 +128,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(256, 124);
+            this.label2.Location = new System.Drawing.Point(240, 124);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 28);
             this.label2.TabIndex = 10;
@@ -159,7 +159,7 @@
             // fiyatTextbox
             // 
             this.fiyatTextbox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.fiyatTextbox.Location = new System.Drawing.Point(384, 158);
+            this.fiyatTextbox.Location = new System.Drawing.Point(368, 158);
             this.fiyatTextbox.Name = "fiyatTextbox";
             this.fiyatTextbox.Size = new System.Drawing.Size(118, 34);
             this.fiyatTextbox.TabIndex = 14;
@@ -169,7 +169,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(395, 124);
+            this.label5.Location = new System.Drawing.Point(379, 124);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(107, 28);
             this.label5.TabIndex = 10;
@@ -179,7 +179,7 @@
             // 
             this.ürünAdıComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ürünAdıComboBox.FormattingEnabled = true;
-            this.ürünAdıComboBox.Location = new System.Drawing.Point(88, 158);
+            this.ürünAdıComboBox.Location = new System.Drawing.Point(72, 158);
             this.ürünAdıComboBox.Name = "ürünAdıComboBox";
             this.ürünAdıComboBox.Size = new System.Drawing.Size(163, 36);
             this.ürünAdıComboBox.TabIndex = 16;
@@ -236,7 +236,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label6.Location = new System.Drawing.Point(87, 487);
+            this.label6.Location = new System.Drawing.Point(71, 487);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(154, 41);
             this.label6.TabIndex = 18;
@@ -249,7 +249,7 @@
             this.totalCountLabel.AutoSize = true;
             this.totalCountLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.totalCountLabel.ForeColor = System.Drawing.Color.White;
-            this.totalCountLabel.Location = new System.Drawing.Point(329, 487);
+            this.totalCountLabel.Location = new System.Drawing.Point(313, 487);
             this.totalCountLabel.Name = "totalCountLabel";
             this.totalCountLabel.Size = new System.Drawing.Size(30, 41);
             this.totalCountLabel.TabIndex = 19;
@@ -260,7 +260,7 @@
             this.productnamelabel.AutoSize = true;
             this.productnamelabel.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.productnamelabel.ForeColor = System.Drawing.Color.White;
-            this.productnamelabel.Location = new System.Drawing.Point(340, 383);
+            this.productnamelabel.Location = new System.Drawing.Point(324, 383);
             this.productnamelabel.Name = "productnamelabel";
             this.productnamelabel.Size = new System.Drawing.Size(56, 41);
             this.productnamelabel.TabIndex = 22;
@@ -271,7 +271,7 @@
             this.productcountlabel.AutoSize = true;
             this.productcountlabel.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.productcountlabel.ForeColor = System.Drawing.Color.White;
-            this.productcountlabel.Location = new System.Drawing.Point(340, 430);
+            this.productcountlabel.Location = new System.Drawing.Point(324, 430);
             this.productcountlabel.Name = "productcountlabel";
             this.productcountlabel.Size = new System.Drawing.Size(108, 41);
             this.productcountlabel.TabIndex = 23;
@@ -282,7 +282,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(84, 383);
+            this.label7.Location = new System.Drawing.Point(68, 383);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(136, 41);
             this.label7.TabIndex = 24;
@@ -294,7 +294,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(84, 430);
+            this.label8.Location = new System.Drawing.Point(68, 430);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(193, 41);
             this.label8.TabIndex = 25;
@@ -306,7 +306,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(367, 430);
+            this.label9.Location = new System.Drawing.Point(351, 430);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(30, 41);
             this.label9.TabIndex = 26;
@@ -433,7 +433,7 @@
             this.guna2PictureBox8.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox8.Image = global::example.Properties.Resources.Buy_Sign;
             this.guna2PictureBox8.ImageRotate = 0F;
-            this.guna2PictureBox8.Location = new System.Drawing.Point(410, 302);
+            this.guna2PictureBox8.Location = new System.Drawing.Point(394, 302);
             this.guna2PictureBox8.Name = "guna2PictureBox8";
             this.guna2PictureBox8.Size = new System.Drawing.Size(92, 63);
             this.guna2PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -449,7 +449,7 @@
             this.guna2PictureBox7.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox7.Image = global::example.Properties.Resources.Sell_Sign;
             this.guna2PictureBox7.ImageRotate = 0F;
-            this.guna2PictureBox7.Location = new System.Drawing.Point(90, 300);
+            this.guna2PictureBox7.Location = new System.Drawing.Point(74, 300);
             this.guna2PictureBox7.Name = "guna2PictureBox7";
             this.guna2PictureBox7.Size = new System.Drawing.Size(92, 63);
             this.guna2PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
