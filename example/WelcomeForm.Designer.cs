@@ -71,6 +71,8 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.aciklamatext = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2Separator4 = new Guna.UI2.WinForms.Guna2Separator();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
@@ -220,7 +222,7 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(874, 551);
+            this.dataGridView1.Size = new System.Drawing.Size(874, 474);
             this.dataGridView1.TabIndex = 1;
             // 
             // label6
@@ -228,7 +230,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label6.Location = new System.Drawing.Point(71, 487);
+            this.label6.Location = new System.Drawing.Point(71, 494);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(154, 41);
             this.label6.TabIndex = 18;
@@ -241,7 +243,7 @@
             this.totalCountLabel.AutoSize = true;
             this.totalCountLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.totalCountLabel.ForeColor = System.Drawing.Color.White;
-            this.totalCountLabel.Location = new System.Drawing.Point(313, 487);
+            this.totalCountLabel.Location = new System.Drawing.Point(313, 494);
             this.totalCountLabel.Name = "totalCountLabel";
             this.totalCountLabel.Size = new System.Drawing.Size(30, 41);
             this.totalCountLabel.TabIndex = 19;
@@ -252,7 +254,7 @@
             this.productnamelabel.AutoSize = true;
             this.productnamelabel.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.productnamelabel.ForeColor = System.Drawing.Color.White;
-            this.productnamelabel.Location = new System.Drawing.Point(313, 383);
+            this.productnamelabel.Location = new System.Drawing.Point(313, 390);
             this.productnamelabel.Name = "productnamelabel";
             this.productnamelabel.Size = new System.Drawing.Size(56, 41);
             this.productnamelabel.TabIndex = 22;
@@ -264,7 +266,7 @@
             this.productcountlabel.AutoSize = true;
             this.productcountlabel.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.productcountlabel.ForeColor = System.Drawing.Color.White;
-            this.productcountlabel.Location = new System.Drawing.Point(313, 430);
+            this.productcountlabel.Location = new System.Drawing.Point(313, 437);
             this.productcountlabel.Name = "productcountlabel";
             this.productcountlabel.Size = new System.Drawing.Size(108, 41);
             this.productcountlabel.TabIndex = 23;
@@ -276,7 +278,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(68, 383);
+            this.label7.Location = new System.Drawing.Point(68, 390);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(136, 41);
             this.label7.TabIndex = 24;
@@ -288,7 +290,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(68, 430);
+            this.label8.Location = new System.Drawing.Point(68, 437);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(193, 41);
             this.label8.TabIndex = 25;
@@ -300,7 +302,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(351, 430);
+            this.label9.Location = new System.Drawing.Point(351, 437);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(30, 41);
             this.label9.TabIndex = 26;
@@ -465,7 +467,7 @@
             this.guna2Separator1.FillThickness = 2;
             this.guna2Separator1.Location = new System.Drawing.Point(810, 198);
             this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(441, 10);
+            this.guna2Separator1.Size = new System.Drawing.Size(441, 0);
             this.guna2Separator1.TabIndex = 40;
             this.guna2Separator1.UseTransparentBackground = true;
             // 
@@ -550,7 +552,7 @@
             this.guna2Separator2.FillThickness = 2;
             this.guna2Separator2.Location = new System.Drawing.Point(52, 590);
             this.guna2Separator2.Name = "guna2Separator2";
-            this.guna2Separator2.Size = new System.Drawing.Size(450, 10);
+            this.guna2Separator2.Size = new System.Drawing.Size(450, 0);
             this.guna2Separator2.TabIndex = 44;
             this.guna2Separator2.UseTransparentBackground = true;
             // 
@@ -584,12 +586,36 @@
             this.aciklamatext.Size = new System.Drawing.Size(414, 107);
             this.aciklamatext.TabIndex = 45;
             // 
+            // guna2Separator3
+            // 
+            this.guna2Separator3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Separator3.FillColor = System.Drawing.Color.White;
+            this.guna2Separator3.FillThickness = 2;
+            this.guna2Separator3.Location = new System.Drawing.Point(825, 204);
+            this.guna2Separator3.Name = "guna2Separator3";
+            this.guna2Separator3.Size = new System.Drawing.Size(433, 10);
+            this.guna2Separator3.TabIndex = 46;
+            this.guna2Separator3.UseTransparentBackground = true;
+            // 
+            // guna2Separator4
+            // 
+            this.guna2Separator4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Separator4.FillColor = System.Drawing.Color.White;
+            this.guna2Separator4.FillThickness = 2;
+            this.guna2Separator4.Location = new System.Drawing.Point(61, 590);
+            this.guna2Separator4.Name = "guna2Separator4";
+            this.guna2Separator4.Size = new System.Drawing.Size(441, 10);
+            this.guna2Separator4.TabIndex = 47;
+            this.guna2Separator4.UseTransparentBackground = true;
+            // 
             // WelcomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(46)))));
-            this.ClientSize = new System.Drawing.Size(1500, 840);
+            this.ClientSize = new System.Drawing.Size(1500, 747);
+            this.Controls.Add(this.guna2Separator4);
+            this.Controls.Add(this.guna2Separator3);
             this.Controls.Add(this.aciklamatext);
             this.Controls.Add(this.guna2Separator2);
             this.Controls.Add(this.guna2PictureBox8);
@@ -683,5 +709,7 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2TextBox aciklamatext;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator3;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator4;
     }
 }
