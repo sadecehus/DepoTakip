@@ -78,7 +78,7 @@ namespace example
 
         private void signupButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
             var sf = new SignupForm();
             sf.ShowDialog();
         }

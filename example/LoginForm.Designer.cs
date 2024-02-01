@@ -38,9 +38,9 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -76,6 +76,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(106, 290);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(151, 31);
@@ -87,6 +88,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(106, 366);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 31);
@@ -95,6 +97,7 @@
             // 
             // LoginButton
             // 
+            this.LoginButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LoginButton.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.LoginButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.LoginButton.Location = new System.Drawing.Point(347, 505);
@@ -107,6 +110,7 @@
             // 
             // signupButton
             // 
+            this.signupButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.signupButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.signupButton.Location = new System.Drawing.Point(98, 505);
             this.signupButton.Name = "signupButton";
@@ -150,10 +154,16 @@
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(550, 700);
             this.guna2CustomGradientPanel1.TabIndex = 7;
             // 
-            // guna2Elipse3
+            // guna2Separator2
             // 
-            this.guna2Elipse3.BorderRadius = 40;
-            this.guna2Elipse3.TargetControl = this;
+            this.guna2Separator2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Separator2.FillColor = System.Drawing.Color.White;
+            this.guna2Separator2.FillThickness = 2;
+            this.guna2Separator2.Location = new System.Drawing.Point(61, 464);
+            this.guna2Separator2.Name = "guna2Separator2";
+            this.guna2Separator2.Size = new System.Drawing.Size(441, 10);
+            this.guna2Separator2.TabIndex = 9;
+            this.guna2Separator2.UseTransparentBackground = true;
             // 
             // guna2Separator1
             // 
@@ -166,16 +176,10 @@
             this.guna2Separator1.TabIndex = 7;
             this.guna2Separator1.UseTransparentBackground = true;
             // 
-            // guna2Separator2
+            // guna2Elipse3
             // 
-            this.guna2Separator2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Separator2.FillColor = System.Drawing.Color.White;
-            this.guna2Separator2.FillThickness = 2;
-            this.guna2Separator2.Location = new System.Drawing.Point(61, 464);
-            this.guna2Separator2.Name = "guna2Separator2";
-            this.guna2Separator2.Size = new System.Drawing.Size(441, 10);
-            this.guna2Separator2.TabIndex = 9;
-            this.guna2Separator2.UseTransparentBackground = true;
+            this.guna2Elipse3.BorderRadius = 40;
+            this.guna2Elipse3.TargetControl = this;
             // 
             // guna2Elipse4
             // 
@@ -190,11 +194,11 @@
             // guna2PictureBox4
             // 
             this.guna2PictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox4.Image = global::example.Properties.Resources.icons8_close_32;
+            this.guna2PictureBox4.Image = global::example.Properties.Resources.icons8_exit_40;
             this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(469, 32);
+            this.guna2PictureBox4.Location = new System.Drawing.Point(470, 40);
             this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.Size = new System.Drawing.Size(33, 35);
+            this.guna2PictureBox4.Size = new System.Drawing.Size(50, 48);
             this.guna2PictureBox4.TabIndex = 12;
             this.guna2PictureBox4.TabStop = false;
             this.guna2PictureBox4.UseTransparentBackground = true;

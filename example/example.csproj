@@ -228,6 +228,15 @@
   <ItemGroup>
     <Content Include="138manfarmer2_100718.ico" />
     <Content Include="farm.ico" />
+    <None Include="Resources\icons8-change-50.png" />
+    <None Include="Resources\icons8-cancel-80.png" />
+    <None Include="Resources\icons8-approve-100 %282%29.png" />
+    <None Include="Resources\icons8-approve-100 %281%29.png" />
+    <None Include="Resources\icons8-approve-100.png" />
+    <None Include="Resources\icons8-exit-40.png" />
+    <None Include="Resources\icons8-exit.gif" />
+    <None Include="Resources\icons8-buy-40.png" />
+    <None Include="Resources\icons8-sign-up-68.png" />
     <None Include="Resources\icons8-password-40.png" />
     <None Include="Resources\icons8-user-40.png" />
     <None Include="Resources\icons8-close-32.png" />

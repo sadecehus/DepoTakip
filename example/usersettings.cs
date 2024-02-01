@@ -79,5 +79,33 @@ namespace example
         {
             if (textBox2.Text == textBox3.Text) exsifrekontrol();
         }
+
+        private void guna2PictureBox4_Click(object sender, EventArgs e)
+        {
+            if (textBox2.Text == textBox3.Text) exsifrekontrol();
+            else
+                MessageBox.Show("Girilen Şifreler Aynı Değil");
+        }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+            Close();
+            var afterlogin = new afterlogin();
+            afterlogin.Show();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Close();
+            var afterlogin = new afterlogin();
+            afterlogin.Show();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            if (textBox2.Text == textBox3.Text) exsifrekontrol();
+            else
+                MessageBox.Show("Girilen Şifreler Aynı Değil");
+        }
     }
 }
