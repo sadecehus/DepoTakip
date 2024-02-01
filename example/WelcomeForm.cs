@@ -171,120 +171,7 @@ namespace example
             }
         }
 
-        private void alisBox_Click(object sender, EventArgs e)
-        {
-            if (textBox2.Text == "" || fiyatTextbox.Text == "" || checkercombobox())
-                MessageBox.Show("Ürün miktarı veya fiyat Boş olamaz");
-            else
-                try
-                {
-                    var sorgu =
-                        "INSERT INTO tbl_islem (product, product_count, product_pricie, islemTarih, islemAciklama, username, islemBakiye) VALUES (@product, @product_count, @product_pricie, @islemTarih, @islemAciklama, @username, @islemBakiye)";
-                    using (var conn = new SqlConnection(sqlconn))
-                    {
-                        using (var cmd = new SqlCommand(sorgu, conn))
-                        {
-                            cmd.Parameters.AddWithValue("@product", ürünAdıComboBox.Text);
-                            cmd.Parameters.AddWithValue("@product_count",
-                                float.Parse(textBox2.Text)); // Veri türü float olarak düzeltildi
-                            cmd.Parameters.AddWithValue("@product_pricie",
-                                -float.Parse(fiyatTextbox.Text)); // Veri türü float olarak düzeltildi
-                            cmd.Parameters.AddWithValue("@islemTarih", DateTime.Now);
-                            cmd.Parameters.AddWithValue("@islemAciklama", aciklamatext.Text);
-                            cmd.Parameters.AddWithValue("@username", label3.Text);
-                            cmd.Parameters.AddWithValue("@islemBakiye",
-                                -float.Parse(textBox2.Text) * float.Parse(fiyatTextbox.Text));
-                            conn.Open();
-
-                            if (float.Parse(totalCountLabel.Text) > 0 &&
-                                float.Parse(textBox2.Text) * float.Parse(fiyatTextbox.Text) <=
-                                float.Parse(totalCountLabel.Text))
-                            {
-                                cmd.ExecuteNonQuery();
-                                MessageBox.Show("Alış Başarılı");
-                                UpdateDataGridView();
-                                UpdateTotalCountLabel();
-                            }
-                            else
-                            {
-                                MessageBox.Show("Yeterli Paranız Yok");
-                            }
-                        }
-                    }
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Hata: Yetersiz Bakiye");
-                }
-        }
-
-        private void satisBox_Click(object sender, EventArgs e)
-        {
-            var currentStock = 0;
-            var sorgu2 = "Select SUM (product_count) from tbl_islem where product=@product";
-            using (var conn = new SqlConnection(sqlconn))
-            {
-                using (var cmd = new SqlCommand(sorgu2, conn))
-                {
-                    cmd.Parameters.AddWithValue("@product", ürünAdıComboBox.Text);
-                    conn.Open();
-                    var stockResult = cmd.ExecuteScalar();
-                    if (currentStock == null || stockResult == DBNull.Value)
-                    {
-                    }
-                    else
-                    {
-                        currentStock = Convert.ToInt32(stockResult);
-                        conn.Close();
-                    }
-                }
-            }
-
-            if (textBox2.Text == "" || fiyatTextbox.Text == "" || checkercombobox())
-                MessageBox.Show("Ürün miktarı veya fiyat Boş olamaz");
-            else if (currentStock >= int.Parse(textBox2.Text))
-                try
-                {
-                    var sorgu =
-                        "INSERT INTO tbl_islem (product, product_count, product_pricie, islemTarih, islemAciklama, username, islemBakiye) VALUES (@product, @product_count, @product_pricie, @islemTarih, @islemAciklama, @username, @islemBakiye)";
-                    using (var conn = new SqlConnection(sqlconn))
-                    {
-                        using (var cmd = new SqlCommand(sorgu, conn))
-                        {
-                            cmd.Parameters.AddWithValue("@product", ürünAdıComboBox.Text);
-                            cmd.Parameters.AddWithValue("@product_count",
-                                -float.Parse(textBox2.Text));
-                            cmd.Parameters.AddWithValue("@product_pricie",
-                                float.Parse(fiyatTextbox.Text));
-                            cmd.Parameters.AddWithValue("@islemTarih", DateTime.Now);
-                            cmd.Parameters.AddWithValue("@islemAciklama", aciklamatext.Text);
-                            cmd.Parameters.AddWithValue("@username", label3.Text);
-                            cmd.Parameters.AddWithValue("@islemBakiye",
-                                float.Parse(textBox2.Text) * float.Parse(fiyatTextbox.Text));
-                            conn.Open();
-                            var result = cmd.ExecuteNonQuery();
-
-                            if (result > 0)
-                            {
-                                MessageBox.Show("Satış Başarılı");
-                                UpdateDataGridView();
-                                UpdateTotalCountLabel();
-                            }
-                            else
-                            {
-                                MessageBox.Show("Bir sorun çıktı");
-                            }
-                        }
-                    }
-                }
-                catch (Exception exception)
-                {
-                    MessageBox.Show("Hata: " + exception.Message);
-                }
-            else
-                MessageBox.Show("HATA: ELİNİZDE YETERLİ ÜRÜN YOK");
-        }
-
+        
         //Ürün Ekle butonu
         private void button1_Click(object sender, EventArgs e)
         {
@@ -293,11 +180,7 @@ namespace example
             addProductForm.Show();
         }
 
-        //Button2= Çıkış butonu
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        
 
         private void ürünAdıComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -340,15 +223,6 @@ namespace example
         {
         }
 
-
-        // Button 5 = Rapor Görüntüle Buttonu
-        private void button5_Click(object sender, EventArgs e)
-        {
-            var form1 = new Form1();
-            var rapor = new Rapor();
-            rapor.SetParameterValue(0, LoginForm.oturum);
-            form1.Show();
-        }
 
         //Button 6 = Hasılat Ekle Buttonu
         private void button6_Click(object sender, EventArgs e)
@@ -409,6 +283,7 @@ namespace example
             guna2PictureBox5_Click(sender, e);
         }
 
+        //BUY BUTTON
         private void guna2PictureBox8_Click(object sender, EventArgs e)
         {
             if (textBox2.Text == "" || fiyatTextbox.Text == "" || checkercombobox())
@@ -456,6 +331,7 @@ namespace example
                 }
         }
 
+        //SELL BUTTON
         private void guna2PictureBox7_Click(object sender, EventArgs e)
         {
             var currentStock = 0;
@@ -529,12 +405,7 @@ namespace example
 
         private void label4_Click(object sender, EventArgs e)
         {
-
         }
 
-        private void aciklamatext_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
