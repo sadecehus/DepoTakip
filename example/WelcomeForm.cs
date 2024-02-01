@@ -190,7 +190,7 @@ namespace example
                             cmd.Parameters.AddWithValue("@product_pricie",
                                 -float.Parse(fiyatTextbox.Text)); // Veri türü float olarak düzeltildi
                             cmd.Parameters.AddWithValue("@islemTarih", DateTime.Now);
-                            cmd.Parameters.AddWithValue("@islemAciklama", richTextBox1.Text);
+                            cmd.Parameters.AddWithValue("@islemAciklama", aciklamatext.Text);
                             cmd.Parameters.AddWithValue("@username", label3.Text);
                             cmd.Parameters.AddWithValue("@islemBakiye",
                                 -float.Parse(textBox2.Text) * float.Parse(fiyatTextbox.Text));
@@ -257,7 +257,7 @@ namespace example
                             cmd.Parameters.AddWithValue("@product_pricie",
                                 float.Parse(fiyatTextbox.Text));
                             cmd.Parameters.AddWithValue("@islemTarih", DateTime.Now);
-                            cmd.Parameters.AddWithValue("@islemAciklama", richTextBox1.Text);
+                            cmd.Parameters.AddWithValue("@islemAciklama", aciklamatext.Text);
                             cmd.Parameters.AddWithValue("@username", label3.Text);
                             cmd.Parameters.AddWithValue("@islemBakiye",
                                 float.Parse(textBox2.Text) * float.Parse(fiyatTextbox.Text));
@@ -428,7 +428,7 @@ namespace example
                             cmd.Parameters.AddWithValue("@product_pricie",
                                 -float.Parse(fiyatTextbox.Text)); // Veri türü float olarak düzeltildi
                             cmd.Parameters.AddWithValue("@islemTarih", DateTime.Now);
-                            cmd.Parameters.AddWithValue("@islemAciklama", richTextBox1.Text);
+                            cmd.Parameters.AddWithValue("@islemAciklama", aciklamatext.Text);
                             cmd.Parameters.AddWithValue("@username", label3.Text);
                             cmd.Parameters.AddWithValue("@islemBakiye",
                                 -float.Parse(textBox2.Text) * float.Parse(fiyatTextbox.Text));
@@ -495,7 +495,7 @@ namespace example
                             cmd.Parameters.AddWithValue("@product_pricie",
                                 float.Parse(fiyatTextbox.Text));
                             cmd.Parameters.AddWithValue("@islemTarih", DateTime.Now);
-                            cmd.Parameters.AddWithValue("@islemAciklama", richTextBox1.Text);
+                            cmd.Parameters.AddWithValue("@islemAciklama", aciklamatext.Text);
                             cmd.Parameters.AddWithValue("@username", label3.Text);
                             cmd.Parameters.AddWithValue("@islemBakiye",
                                 float.Parse(textBox2.Text) * float.Parse(fiyatTextbox.Text));
@@ -525,6 +525,16 @@ namespace example
 
         private void label6_Click(object sender, EventArgs e)
         {
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aciklamatext_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
