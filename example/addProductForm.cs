@@ -66,5 +66,60 @@ namespace example
             var welcomeForm = new WelcomeForm(afterlogin.nameofuser);
             welcomeForm.Show();
         }
+
+        private void guna2PictureBox3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var sorgu = "INSERT INTO tbl_products (ürünAdı) VALUES (@ürünAdı)";
+                using (var conn = new SqlConnection(sqlconn))
+                {
+                    using (var cmd = new SqlCommand(sorgu, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@ürünAdı", textBox1.Text);
+                        conn.Open();
+                        var result = cmd.ExecuteNonQuery();
+
+                        if (result > 0)
+                        {
+                            MessageBox.Show("Ürün Eklendi...");
+
+                            Close();
+
+                            var wf = new WelcomeForm(afterlogin.nameofuser);
+                            wf.Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("!Ürün Eklenemedi!");
+                        }
+                    }
+                }
+
+                {
+                }
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception);
+            }
+        }
+
+        private void guna2PictureBox2_Click(object sender, EventArgs e)
+        {
+            Close();
+            var welcomeForm = new WelcomeForm(afterlogin.nameofuser);
+            welcomeForm.Show();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            guna2PictureBox2_Click(sender, e);
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            guna2PictureBox3_Click(sender, e);
+        }
     }
 }

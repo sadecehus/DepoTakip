@@ -228,6 +228,17 @@
   <ItemGroup>
     <Content Include="138manfarmer2_100718.ico" />
     <Content Include="farm.ico" />
+    <None Include="Resources\Sell Sign.png" />
+    <None Include="Resources\Buy Sign.png" />
+    <None Include="Resources\Graph Report.png" />
+    <None Include="Resources\PDF.png" />
+    <None Include="Resources\Cancel1.png" />
+    <None Include="Resources\Back.png" />
+    <None Include="Resources\Add.png" />
+    <None Include="Resources\Return.png" />
+    <None Include="Resources\icons8-user-90.png" />
+    <None Include="Resources\icons8-harvest-64.png" />
+    <None Include="Resources\icons8-barcode-100.png" />
     <None Include="Resources\Search.png" />
     <None Include="Resources\Stocks.png" />
     <None Include="Resources\Cancel.png" />

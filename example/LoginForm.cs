@@ -87,5 +87,9 @@ namespace example
         {
             Application.Exit();
         }
+
+        private void guna2Separator2_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

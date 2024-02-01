@@ -22,12 +22,6 @@ namespace example
             aktifkullanici.Text = afterlogin.nameofuser;
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Close();
-            var wf = new WelcomeForm(afterlogin.nameofuser);
-            wf.Show();
-        }
 
         private void HasılatEkle_Load(object sender, EventArgs e)
         {
@@ -71,6 +65,54 @@ namespace example
                     }
                 }
             }
+        }
+
+        private void guna2PictureBox2_Click(object sender, EventArgs e)
+        {
+            Close();
+            var wf = new WelcomeForm(afterlogin.nameofuser);
+            wf.Show();
+        }
+
+        private void guna2PictureBox3_Click(object sender, EventArgs e)
+        {
+            var sorgu =
+                "INSERT INTO tbl_islem (product, product_count, product_pricie, islemTarih, username, islemAciklama) VALUES (@ürünad, @ürünmiktar, 0,@date,@username, 'Hasılat Eklendi');";
+            using (var conn = new SqlConnection(sqlconn))
+            {
+                using (var cmd = new SqlCommand(sorgu, conn))
+                {
+                    cmd.Parameters.AddWithValue("@ürünad", comboBox1.Text);
+                    cmd.Parameters.AddWithValue("@ürünmiktar", float.Parse(textBox1.Text));
+                    cmd.Parameters.AddWithValue("@username", LoginForm.oturum);
+                    cmd.Parameters.AddWithValue("@date", DateTime.Now);
+                    conn.Open();
+                    var result = cmd.ExecuteNonQuery();
+
+                    if (result > 0)
+                    {
+                        MessageBox.Show("Hasılat Eklendi...");
+
+                        Close();
+                        var wf = new WelcomeForm(afterlogin.nameofuser);
+                        wf.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("!Ürün Eklenemedi!");
+                    }
+                }
+            }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            guna2PictureBox3_Click(sender, e);
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            guna2PictureBox2_Click(sender, e);
         }
     }
 }

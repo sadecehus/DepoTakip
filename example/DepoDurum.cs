@@ -27,7 +27,7 @@ namespace example
         {
             searchbutton_Click(sender, e); // Arama butonunun click olayını çağırın
         }
-       
+
         private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
             Close();
@@ -37,18 +37,17 @@ namespace example
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-
         }
 
         private void searchbutton_Click(object sender, EventArgs e)
         {
-            string searchTerm = searchText.Text.ToLower();
-            
-            DataTable dt = dataGridView1.DataSource as DataTable;
+            var searchTerm = searchText.Text.ToLower();
+
+            var dt = dataGridView1.DataSource as DataTable;
             if (dt != null)
             {
                 // "ürünAdı" sütununda arama yap
-                DataView dv = dt.DefaultView;
+                var dv = dt.DefaultView;
                 dv.RowFilter = string.Format("ürünAdı LIKE '%{0}%'", searchTerm);
             }
         }

@@ -100,7 +100,7 @@
             this.LoginButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LoginButton.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.LoginButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.LoginButton.Location = new System.Drawing.Point(347, 505);
+            this.LoginButton.Location = new System.Drawing.Point(342, 531);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(120, 45);
             this.LoginButton.TabIndex = 4;
@@ -112,7 +112,7 @@
             // 
             this.signupButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.signupButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.signupButton.Location = new System.Drawing.Point(98, 505);
+            this.signupButton.Location = new System.Drawing.Point(93, 531);
             this.signupButton.Name = "signupButton";
             this.signupButton.Size = new System.Drawing.Size(120, 45);
             this.signupButton.TabIndex = 6;
@@ -159,18 +159,19 @@
             this.guna2Separator2.BackColor = System.Drawing.Color.Transparent;
             this.guna2Separator2.FillColor = System.Drawing.Color.White;
             this.guna2Separator2.FillThickness = 2;
-            this.guna2Separator2.Location = new System.Drawing.Point(61, 464);
+            this.guna2Separator2.Location = new System.Drawing.Point(50, 171);
             this.guna2Separator2.Name = "guna2Separator2";
             this.guna2Separator2.Size = new System.Drawing.Size(441, 10);
             this.guna2Separator2.TabIndex = 9;
             this.guna2Separator2.UseTransparentBackground = true;
+            this.guna2Separator2.Click += new System.EventHandler(this.guna2Separator2_Click);
             // 
             // guna2Separator1
             // 
             this.guna2Separator1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Separator1.FillColor = System.Drawing.Color.White;
             this.guna2Separator1.FillThickness = 2;
-            this.guna2Separator1.Location = new System.Drawing.Point(61, 201);
+            this.guna2Separator1.Location = new System.Drawing.Point(50, 500);
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(441, 10);
             this.guna2Separator1.TabIndex = 7;
