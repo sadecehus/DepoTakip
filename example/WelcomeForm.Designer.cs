@@ -148,7 +148,7 @@
             this.label4.TabIndex = 13;
             this.label4.Text = "Username:";
             this.label4.Visible = false;
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            
             // 
             // fiyatTextbox
             // 
@@ -236,7 +236,7 @@
             this.label6.TabIndex = 18;
             this.label6.Text = "Bakiyeniz:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            
             // 
             // totalCountLabel
             // 
@@ -318,7 +318,7 @@
             this.label10.Size = new System.Drawing.Size(237, 50);
             this.label10.TabIndex = 27;
             this.label10.Text = "Son İşlemler";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
+         
             // 
             // button6
             // 

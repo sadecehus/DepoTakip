@@ -148,7 +148,7 @@ namespace example
             }
         }
 
-
+        //Miktarı Alış ve Satış sonrası güncelliyor
         private void UpdateTotalCountLabel()
         {
             try
@@ -181,7 +181,7 @@ namespace example
         }
 
         
-
+        //Combobox değişirse ürün adını ve sayısını güncelliyor
         private void ürünAdıComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (ürünAdıComboBox.SelectedIndex != -1)
@@ -191,6 +191,7 @@ namespace example
             }
         }
 
+        //Adi üzerinde bir metodumuz
         private void GüncelleProductNameAndCount(string productName)
         {
             using (conn = new SqlConnection(sqlconn))
@@ -212,17 +213,13 @@ namespace example
             }
         }
 
+        //Combobox boş ise true dönüyor
         private bool checkercombobox()
         {
             if (ürünAdıComboBox.Text == "") return true;
 
             return false;
         }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-        }
-
 
         //Button 6 = Hasılat Ekle Buttonu
         private void button6_Click(object sender, EventArgs e)
@@ -232,6 +229,7 @@ namespace example
             he.ShowDialog();
         }
 
+        //Picturebox1 = Geri Dön 
         private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
             var af = new afterlogin();
@@ -239,11 +237,13 @@ namespace example
             af.Show();
         }
 
+        //Picturebox2 = Çıkış
         private void guna2PictureBox3_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        //Picturebox4 = PDF 
         private void guna2PictureBox4_Click(object sender, EventArgs e)
         {
             // SaveFileDialog kullanarak kullanıcının dosyayı nereye kaydedeceğini seçmesini sağlayın
@@ -265,11 +265,13 @@ namespace example
                 }
         }
 
+        //PDF OLARAK KAYDET LABELİ
         private void label12_Click(object sender, EventArgs e)
         {
             guna2PictureBox4_Click(sender, e);
         }
 
+        //CRYSTAL REPORT
         private void guna2PictureBox5_Click(object sender, EventArgs e)
         {
             var form1 = new Form1();
@@ -277,7 +279,8 @@ namespace example
             rapor.SetParameterValue(0, LoginForm.oturum);
             form1.Show();
         }
-
+        
+        //RAPORU GÖRÜNTÜLE LABELİ
         private void label13_Click(object sender, EventArgs e)
         {
             guna2PictureBox5_Click(sender, e);
@@ -292,7 +295,8 @@ namespace example
                 try
                 {
                     var sorgu =
-                        "INSERT INTO tbl_islem (product, product_count, product_pricie, islemTarih, islemAciklama, username, islemBakiye) VALUES (@product, @product_count, @product_pricie, @islemTarih, @islemAciklama, @username, @islemBakiye)";
+                        "INSERT INTO tbl_islem (product, product_count, product_pricie, islemTarih, islemAciklama, username, islemBakiye) " +
+                        "VALUES (@product, @product_count, @product_pricie, @islemTarih, @islemAciklama, @username, @islemBakiye)";
                     using (var conn = new SqlConnection(sqlconn))
                     {
                         using (var cmd = new SqlCommand(sorgu, conn))
@@ -360,7 +364,8 @@ namespace example
                 try
                 {
                     var sorgu =
-                        "INSERT INTO tbl_islem (product, product_count, product_pricie, islemTarih, islemAciklama, username, islemBakiye) VALUES (@product, @product_count, @product_pricie, @islemTarih, @islemAciklama, @username, @islemBakiye)";
+                        "INSERT INTO tbl_islem (product, product_count, product_pricie, islemTarih, islemAciklama, username, islemBakiye)" +
+                        " VALUES (@product, @product_count, @product_pricie, @islemTarih, @islemAciklama, @username, @islemBakiye)";
                     using (var conn = new SqlConnection(sqlconn))
                     {
                         using (var cmd = new SqlCommand(sorgu, conn))
@@ -399,13 +404,6 @@ namespace example
                 MessageBox.Show("HATA: ELİNİZDE YETERLİ ÜRÜN YOK");
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-        }
 
     }
 }
