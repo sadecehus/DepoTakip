@@ -20,17 +20,37 @@ namespace example
         {
             InitializeComponent();
             database.fillGrid(dataGridView1, "v_ÜrünTotal where username='" + LoginForm.oturum + "'");
+            searchText.TextChanged += searchText_TextChanged;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void searchText_TextChanged(object sender, EventArgs e)
         {
+            searchbutton_Click(sender, e); // Arama butonunun click olayını çağırın
         }
-
-        private void button1_Click_1(object sender, EventArgs e)
+       
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
             Close();
             var al = new afterlogin();
             al.Show();
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void searchbutton_Click(object sender, EventArgs e)
+        {
+            string searchTerm = searchText.Text.ToLower();
+            
+            DataTable dt = dataGridView1.DataSource as DataTable;
+            if (dt != null)
+            {
+                // "ürünAdı" sütununda arama yap
+                DataView dv = dt.DefaultView;
+                dv.RowFilter = string.Format("ürünAdı LIKE '%{0}%'", searchTerm);
+            }
         }
     }
 }

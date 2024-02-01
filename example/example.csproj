@@ -228,6 +228,9 @@
   <ItemGroup>
     <Content Include="138manfarmer2_100718.ico" />
     <Content Include="farm.ico" />
+    <None Include="Resources\Search.png" />
+    <None Include="Resources\Stocks.png" />
+    <None Include="Resources\Cancel.png" />
     <None Include="Resources\icons8-change-50.png" />
     <None Include="Resources\icons8-cancel-80.png" />
     <None Include="Resources\icons8-approve-100 %282%29.png" />

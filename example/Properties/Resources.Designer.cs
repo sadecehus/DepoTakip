@@ -143,6 +143,16 @@ namespace example.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cancel {
+            get {
+                object obj = ResourceManager.GetObject("Cancel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Custom_Icon_Design_Flatastic_1_Delete_48 {
             get {
                 object obj = ResourceManager.GetObject("Custom-Icon-Design-Flatastic-1-Delete.48", resourceCulture);
@@ -316,6 +326,26 @@ namespace example.Properties {
         internal static System.Drawing.Bitmap icons8_user_40 {
             get {
                 object obj = ResourceManager.GetObject("icons8-user-40", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Search {
+            get {
+                object obj = ResourceManager.GetObject("Search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Stocks {
+            get {
+                object obj = ResourceManager.GetObject("Stocks", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
