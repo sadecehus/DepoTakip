@@ -49,6 +49,8 @@ namespace example
                         {
                             MessageBox.Show("Üye oldunuz...");
                             Close();
+                            LoginForm lf = new LoginForm();
+                            lf.Show();
                         }
                         else
                         {

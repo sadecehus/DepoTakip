@@ -300,7 +300,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(351, 437);
+            this.label9.Location = new System.Drawing.Point(315, 437);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(30, 41);
             this.label9.TabIndex = 26;

@@ -339,12 +339,13 @@ namespace example
         private void guna2PictureBox7_Click(object sender, EventArgs e)
         {
             var currentStock = 0;
-            var sorgu2 = "Select SUM (product_count) from tbl_islem where product=@product";
+            var sorgu2 = "Select [Total Product] from v_ÜrünTotal where ürünAdı=@product AND username=@username";
             using (var conn = new SqlConnection(sqlconn))
             {
                 using (var cmd = new SqlCommand(sorgu2, conn))
                 {
                     cmd.Parameters.AddWithValue("@product", ürünAdıComboBox.Text);
+                    cmd.Parameters.AddWithValue("@username", LoginForm.oturum);
                     conn.Open();
                     var stockResult = cmd.ExecuteScalar();
                     if (currentStock == null || stockResult == DBNull.Value)
