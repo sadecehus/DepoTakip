@@ -89,11 +89,11 @@
             // 
             this.nameLabel.AutoSize = true;
             this.nameLabel.BackColor = System.Drawing.Color.Transparent;
-            this.nameLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.nameLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.nameLabel.ForeColor = System.Drawing.Color.White;
-            this.nameLabel.Location = new System.Drawing.Point(802, 9);
+            this.nameLabel.Location = new System.Drawing.Point(803, 16);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(235, 45);
+            this.nameLabel.Size = new System.Drawing.Size(217, 41);
             this.nameLabel.TabIndex = 0;
             this.nameLabel.Text = "nameSurname";
             // 
@@ -148,7 +148,6 @@
             this.label4.TabIndex = 13;
             this.label4.Text = "Username:";
             this.label4.Visible = false;
-            
             // 
             // fiyatTextbox
             // 
@@ -236,7 +235,6 @@
             this.label6.TabIndex = 18;
             this.label6.Text = "Bakiyeniz:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            
             // 
             // totalCountLabel
             // 
@@ -318,11 +316,11 @@
             this.label10.Size = new System.Drawing.Size(237, 50);
             this.label10.TabIndex = 27;
             this.label10.Text = "Son İşlemler";
-         
             // 
             // button6
             // 
             this.button6.BackColor = System.Drawing.SystemColors.Control;
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button6.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button6.Location = new System.Drawing.Point(52, 671);
@@ -336,6 +334,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.Location = new System.Drawing.Point(281, 671);
             this.button1.Name = "button1";
@@ -369,9 +368,9 @@
             this.guna2PictureBox6.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox6.Image = global::example.Properties.Resources.icons8_user_90;
             this.guna2PictureBox6.ImageRotate = 0F;
-            this.guna2PictureBox6.Location = new System.Drawing.Point(717, 2);
+            this.guna2PictureBox6.Location = new System.Drawing.Point(754, 12);
             this.guna2PictureBox6.Name = "guna2PictureBox6";
-            this.guna2PictureBox6.Size = new System.Drawing.Size(92, 63);
+            this.guna2PictureBox6.Size = new System.Drawing.Size(54, 49);
             this.guna2PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox6.TabIndex = 36;
             this.guna2PictureBox6.TabStop = false;
