@@ -23,6 +23,7 @@ namespace example
             searchText.TextChanged += searchText_TextChanged;
         }
 
+        //İnstantly arama yapmasını sağlayan event
         private void searchText_TextChanged(object sender, EventArgs e)
         {
             searchbutton_Click(sender, e); // Arama butonunun click olayını çağırın
@@ -39,6 +40,8 @@ namespace example
         {
         }
 
+
+        //Arama yapılan yer
         private void searchbutton_Click(object sender, EventArgs e)
         {
             var searchTerm = searchText.Text.ToLower();

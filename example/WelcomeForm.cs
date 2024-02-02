@@ -114,7 +114,7 @@ namespace example
             try
             {
                 conn = new SqlConnection(sqlconn);
-                adapter = new SqlDataAdapter("select * from tbl_islem where username='" + LoginForm.oturum + "'", conn);
+                adapter = new SqlDataAdapter("SELECT islemID AS [ID], product AS [Ürün Adı], product_count AS [Ürün Miktarı], product_pricie AS [Birim Fiyat], islemTarih AS [Tarih], islemAciklama AS [Açıklama], islemBakiye [Tutar] FROM tbl_islem where username='" + LoginForm.oturum +"'", conn);
                 ds = new DataSet();
                 conn.Open();
                 adapter.Fill(ds, "tbl_islem");
@@ -134,7 +134,7 @@ namespace example
             {
                 using (conn = new SqlConnection(sqlconn))
                 {
-                    var sorgu = "SELECT * FROM tbl_islem where username='" + LoginForm.oturum + "'";
+                    var sorgu = "SELECT islemID AS [ID], product AS [Ürün Adı], product_count AS [Ürün Miktarı], product_pricie AS [Birim Fiyat], islemTarih AS [Tarih], islemAciklama AS [Açıklama], islemBakiye [Tutar] FROM tbl_islem where username='" + LoginForm.oturum + "'";
                     var command = new SqlCommand(sorgu, conn);
                     var adapter = new SqlDataAdapter(command);
                     var dt = new DataTable();
@@ -147,7 +147,6 @@ namespace example
                 MessageBox.Show("DataGridView güncelleme hatası: " + ex.Message);
             }
         }
-
         //Miktarı Alış ve Satış sonrası güncelliyor
         private void UpdateTotalCountLabel()
         {
@@ -191,7 +190,7 @@ namespace example
             }
         }
 
-        //Adi üzerinde bir metodumuz
+        //Adi üzerinde bir methodumuz
         private void GüncelleProductNameAndCount(string productName)
         {
             using (conn = new SqlConnection(sqlconn))
@@ -305,12 +304,12 @@ namespace example
                             cmd.Parameters.AddWithValue("@product_count",
                                 float.Parse(textBox2.Text)); // Veri türü float olarak düzeltildi
                             cmd.Parameters.AddWithValue("@product_pricie",
-                                -float.Parse(fiyatTextbox.Text)); // Veri türü float olarak düzeltildi
+                                -float.Parse(fiyatTextbox.Text)); // Veri türü float olarak düzeltildi PARA DÜŞSÜN DİYE - KONDU ÖNÜNE
                             cmd.Parameters.AddWithValue("@islemTarih", DateTime.Now);
                             cmd.Parameters.AddWithValue("@islemAciklama", aciklamatext.Text);
                             cmd.Parameters.AddWithValue("@username", label3.Text);
                             cmd.Parameters.AddWithValue("@islemBakiye",
-                                -float.Parse(textBox2.Text) * float.Parse(fiyatTextbox.Text));
+                                -float.Parse(textBox2.Text) * float.Parse(fiyatTextbox.Text)); // İŞLEM BAKİYESİ
                             conn.Open();
 
                             if (float.Parse(totalCountLabel.Text) > 0 &&
@@ -404,7 +403,5 @@ namespace example
             else
                 MessageBox.Show("HATA: ELİNİZDE YETERLİ ÜRÜN YOK");
         }
-
-
     }
 }
