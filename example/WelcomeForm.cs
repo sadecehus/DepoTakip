@@ -114,7 +114,9 @@ namespace example
             try
             {
                 conn = new SqlConnection(sqlconn);
-                adapter = new SqlDataAdapter("SELECT islemID AS [ID], product AS [Ürün Adı], product_count AS [Ürün Miktarı], product_pricie AS [Birim Fiyat], islemTarih AS [Tarih], islemAciklama AS [Açıklama], islemBakiye [Tutar] FROM tbl_islem where username='" + LoginForm.oturum +"'", conn);
+                adapter = new SqlDataAdapter(
+                    "SELECT islemID AS [ID], product AS [Ürün Adı], product_count AS [Ürün Miktarı], product_pricie AS [Birim Fiyat], islemTarih AS [Tarih], islemAciklama AS [Açıklama], islemBakiye [Tutar] FROM tbl_islem where username='" +
+                    LoginForm.oturum + "'", conn);
                 ds = new DataSet();
                 conn.Open();
                 adapter.Fill(ds, "tbl_islem");
@@ -134,7 +136,9 @@ namespace example
             {
                 using (conn = new SqlConnection(sqlconn))
                 {
-                    var sorgu = "SELECT islemID AS [ID], product AS [Ürün Adı], product_count AS [Ürün Miktarı], product_pricie AS [Birim Fiyat], islemTarih AS [Tarih], islemAciklama AS [Açıklama], islemBakiye [Tutar] FROM tbl_islem where username='" + LoginForm.oturum + "'";
+                    var sorgu =
+                        "SELECT islemID AS [ID], product AS [Ürün Adı], product_count AS [Ürün Miktarı], product_pricie AS [Birim Fiyat], islemTarih AS [Tarih], islemAciklama AS [Açıklama], islemBakiye [Tutar] FROM tbl_islem where username='" +
+                        LoginForm.oturum + "'";
                     var command = new SqlCommand(sorgu, conn);
                     var adapter = new SqlDataAdapter(command);
                     var dt = new DataTable();
@@ -147,6 +151,7 @@ namespace example
                 MessageBox.Show("DataGridView güncelleme hatası: " + ex.Message);
             }
         }
+
         //Miktarı Alış ve Satış sonrası güncelliyor
         private void UpdateTotalCountLabel()
         {
@@ -170,7 +175,7 @@ namespace example
             }
         }
 
-        
+
         //Ürün Ekle butonu
         private void button1_Click(object sender, EventArgs e)
         {
@@ -179,7 +184,7 @@ namespace example
             addProductForm.Show();
         }
 
-        
+
         //Combobox değişirse ürün adını ve sayısını güncelliyor
         private void ürünAdıComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -278,8 +283,8 @@ namespace example
             rapor.SetParameterValue(0, LoginForm.oturum);
             form1.Show();
         }
-        
-        //RAPORU GÖRÜNTÜLE LABELİ
+
+        //RAPORU GÖRÜNTÜLE LABEL RAPORU GÖRNTÜLE
         private void label13_Click(object sender, EventArgs e)
         {
             guna2PictureBox5_Click(sender, e);
@@ -304,7 +309,8 @@ namespace example
                             cmd.Parameters.AddWithValue("@product_count",
                                 float.Parse(textBox2.Text)); // Veri türü float olarak düzeltildi
                             cmd.Parameters.AddWithValue("@product_pricie",
-                                -float.Parse(fiyatTextbox.Text)); // Veri türü float olarak düzeltildi PARA DÜŞSÜN DİYE - KONDU ÖNÜNE
+                                -float.Parse(fiyatTextbox
+                                    .Text)); // Veri türü float olarak düzeltildi PARA DÜŞSÜN DİYE - KONDU ÖNÜNE
                             cmd.Parameters.AddWithValue("@islemTarih", DateTime.Now);
                             cmd.Parameters.AddWithValue("@islemAciklama", aciklamatext.Text);
                             cmd.Parameters.AddWithValue("@username", label3.Text);
@@ -359,8 +365,8 @@ namespace example
             }
 
             if (textBox2.Text == "" || fiyatTextbox.Text == "" || checkercombobox())
-                MessageBox.Show("Ürün miktarı veya fiyat Boş olamaz");
-            else if (currentStock >= int.Parse(textBox2.Text))
+                MessageBox.Show("HATA :Ürün miktarı veya fiyat Boş olamaz!");
+            else if (currentStock >= int.Parse(textBox2.Text)) // Burda int girmediginde hata cıkıyor
                 try
                 {
                     var sorgu =
@@ -402,6 +408,24 @@ namespace example
                 }
             else
                 MessageBox.Show("HATA: ELİNİZDE YETERLİ ÜRÜN YOK");
+        }
+
+        private void searchbutton_Click(object sender, EventArgs e)
+        {
+            var searchTerm = searchText.Text.ToLower();
+
+            var dt = dataGridView1.DataSource as DataTable;
+            if (dt != null)
+            {
+                // "ürünAdı" sütununda arama yap
+                var dv = dt.DefaultView;
+                dv.RowFilter = string.Format("[Ürün Adı] LIKE '%{0}%'", searchTerm);
+            }
+        }
+
+        private void searchText_TextChanged(object sender, EventArgs e)
+        {
+            searchbutton_Click(sender, e);
         }
     }
 }

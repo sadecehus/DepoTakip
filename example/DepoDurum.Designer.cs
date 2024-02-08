@@ -190,6 +190,7 @@
             this.searchText.SelectedText = "";
             this.searchText.Size = new System.Drawing.Size(296, 55);
             this.searchText.TabIndex = 3;
+            this.searchText.TextChanged += new System.EventHandler(this.searchText_TextChanged_1);
             // 
             // searchbutton
             // 

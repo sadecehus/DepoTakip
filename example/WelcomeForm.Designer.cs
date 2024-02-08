@@ -73,6 +73,8 @@
             this.aciklamatext = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2Separator4 = new Guna.UI2.WinForms.Guna2Separator();
+            this.searchbutton = new Guna.UI2.WinForms.Guna2Button();
+            this.searchText = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
@@ -215,13 +217,13 @@
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(46)))));
-            this.dataGridView1.Location = new System.Drawing.Point(596, 237);
+            this.dataGridView1.Location = new System.Drawing.Point(596, 298);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(874, 474);
+            this.dataGridView1.Size = new System.Drawing.Size(874, 413);
             this.dataGridView1.TabIndex = 1;
             // 
             // label6
@@ -607,12 +609,62 @@
             this.guna2Separator4.TabIndex = 47;
             this.guna2Separator4.UseTransparentBackground = true;
             // 
+            // searchbutton
+            // 
+            this.searchbutton.BackColor = System.Drawing.Color.Transparent;
+            this.searchbutton.BorderRadius = 25;
+            this.searchbutton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.searchbutton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.searchbutton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.searchbutton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.searchbutton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(16)))), ((int)(((byte)(221)))));
+            this.searchbutton.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.searchbutton.ForeColor = System.Drawing.Color.White;
+            this.searchbutton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.searchbutton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.searchbutton.HoverState.ForeColor = System.Drawing.Color.White;
+            this.searchbutton.HoverState.Image = global::example.Properties.Resources.Search;
+            this.searchbutton.Image = global::example.Properties.Resources.Search;
+            this.searchbutton.Location = new System.Drawing.Point(907, 228);
+            this.searchbutton.Name = "searchbutton";
+            this.searchbutton.Size = new System.Drawing.Size(51, 53);
+            this.searchbutton.TabIndex = 48;
+            this.searchbutton.Visible = false;
+            this.searchbutton.Click += new System.EventHandler(this.searchbutton_Click);
+            // 
+            // searchText
+            // 
+            this.searchText.BorderColor = System.Drawing.Color.Black;
+            this.searchText.BorderRadius = 25;
+            this.searchText.BorderThickness = 0;
+            this.searchText.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.searchText.DefaultText = "";
+            this.searchText.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.searchText.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.searchText.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.searchText.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.searchText.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
+            this.searchText.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.searchText.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.searchText.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.searchText.Location = new System.Drawing.Point(605, 228);
+            this.searchText.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.searchText.Name = "searchText";
+            this.searchText.PasswordChar = '\0';
+            this.searchText.PlaceholderText = "Ürün Ara";
+            this.searchText.SelectedText = "";
+            this.searchText.Size = new System.Drawing.Size(296, 55);
+            this.searchText.TabIndex = 49;
+            this.searchText.TextChanged += new System.EventHandler(this.searchText_TextChanged);
+            // 
             // WelcomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(46)))));
             this.ClientSize = new System.Drawing.Size(1500, 747);
+            this.Controls.Add(this.searchText);
+            this.Controls.Add(this.searchbutton);
             this.Controls.Add(this.guna2Separator4);
             this.Controls.Add(this.guna2Separator3);
             this.Controls.Add(this.aciklamatext);
@@ -710,5 +762,7 @@
         private Guna.UI2.WinForms.Guna2TextBox aciklamatext;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator3;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator4;
+        private Guna.UI2.WinForms.Guna2Button searchbutton;
+        private Guna.UI2.WinForms.Guna2TextBox searchText;
     }
 }

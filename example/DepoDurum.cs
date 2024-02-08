@@ -54,5 +54,10 @@ namespace example
                 dv.RowFilter = string.Format("ürünAdı LIKE '%{0}%'", searchTerm);
             }
         }
+
+        private void searchText_TextChanged_1(object sender, EventArgs e)
+        {
+            searchbutton_Click(sender, e);
+        }
     }
 }

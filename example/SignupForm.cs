@@ -49,7 +49,7 @@ namespace example
                         {
                             MessageBox.Show("Üye oldunuz...");
                             Close();
-                            LoginForm lf = new LoginForm();
+                            var lf = new LoginForm();
                             lf.Show();
                         }
                         else
